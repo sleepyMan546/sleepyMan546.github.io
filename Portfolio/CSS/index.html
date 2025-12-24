@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanapol Portfolio</title>
+    <style>
+        /* 1. ตั้งค่าพื้นฐาน (Reset & Fonts) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #DBDBD6
+            ; 
+            
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. แถบ Header ด้านบนสุด */
+        .top-bar {
+            width: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 100
+            px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 100
+            px;
+            text-transform: uppercase;
+        }
+
+        /* 3. จัด Layout แบบ Grid (Bento Style) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์เท่ากัน */
+            grid-template-rows: 1fr 1fr;    /* แบ่งเป็น 2 แถวเท่ากัน */
+            gap: 24px;                      /* ระยะห่างระหว่างกล่อง */
+            width: 98%;
+            max-width: 2000px;
+            height: 100vh;
+            margin-top: 24px;
+        }
+
+        /* 4. สไตล์ของการ์ดแต่ละใบ */
+        .card {
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden; /* เพื่อไม่ให้รูปภาพล้นมุมโค้ง */
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-50px); /* ขยับขึ้นนิดนึงตอนชี้ */
+        }
+
+        /* 5. เอฟเฟกต์รูปภาพ (หัวใจสำคัญ!) */
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ให้รูปเต็มกล่องโดยไม่เสียสัดส่วน */
+            filter: grayscale(100%); /* เริ่มต้นเป็นขาวดำ */
+            transition: filter 0.5s ease; /* เอฟเฟกต์เปลี่ยนสีนุ่มๆ */
+        }
+
+        /* เมื่อเอาเมาส์ชี้ที่การ์ด ให้รูปข้างในกลับมามีสี */
+        .card:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* 6. จัดวาง Text ในการ์ด */
+        .card-content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2; /* ให้อยู่เหนือรูปภาพ */
+            pointer-events: none; /* ให้เมาส์ทะลุไปโดนรูปได้ */
+        }
+
+        .card-content h2 {
+            font-size: 32px;
+            color: #000;
+            font-weight: 400;
+        }
+
+        /* -- ปรับแต่งเฉพาะกล่อง -- */
+        
+        /* กล่องขวา (Design Skill) ให้สูงครอบ 2 แถว */
+        .card.tall {
+            grid-column: 2 / 3; /* อยู่คอลัมน์ที่ 2 */
+            grid-row: 1 / 3;    /* ควบตั้งแต่แถว 1 ถึง 3 */
+        }
+
+        /* กล่อง Hello (ซ้ายบน) */
+        .card.box-1 img {
+            /* ปรับตำแหน่งรูปให้ชิดขวา ตามคลิป */
+            object-position: center right; 
+            width: 100%; /* ให้รูปกินพื้นที่แค่ส่วนขวา */
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+        
+        /* กล่อง Who are you (ซ้ายล่าง - ธีมมืด) */
+        .card.dark-theme {
+            background-color: #000;
+            color: white;
+        }
+        .card.dark-theme h2 {
+            color: white;
+        }
+        .card.dark-theme img {
+             /* ปรับให้รูปอยู่ด้านล่าง */
+            mask-image: linear-gradient(to top, black 60%, transparent 100%); /* ไล่เฟดรูปนิดหน่อย (Optional) */
+        }
+
+        /* 7. ปุ่มเมนูด้านล่าง (Floating Menu) */
+        .floating-menu {
+            position: fixed;
+            bottom: 30px;
+            background-color: rgba(100, 100, 100, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">TANAPOL</div>
+
+    <div class="grid-container">
+        
+        <div class="card box-1">
+            <div class="card-content">
+                <h2>Hello</h2>
+            </div>
+            <img src="/Img/draw.png" alt="Hello Image">
+        </div>
+
+        <div class="card tall">
+            <div class="card-content">
+                <h2>DESIGN SKILL</h2>
+            </div>
+            <img src="/Img/Phrolova.jpg" alt="Design Skill">
+        </div>
+
+        <div class="card dark-theme">
+            <div class="card-content">
+                <h2>Who are you</h2>
+            </div>
+            <img src="/Img/Phrolova.jpg" alt="Portrait">
+        </div>
+
+    </div>
+
+    <div class="floating-menu">
+        <a href="#" class="menu-item active">Dashboard</a>
+        <a href="#" class="menu-item">Project</a>
+        <a href="#" class="menu-item">About</a>
+    </div>
+<div><p>
+    © 2024 Tanapol Portfolio 
+    <a href="about.html">Valorant</a>
+</p></div>
+</body>
+</html>
