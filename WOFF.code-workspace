@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "WOFF",
+			"path": "../../../Downloads/MiSans_Thai (1)/MiSans Thai/Web_Fonts/WOFF"
+		},
+		{
+			"name": "sleepyMan546.github.io",
+			"path": "."
+		},
+		{
+			"name": "css",
+			"path": "../../../Downloads/figma-to-html/css"
+		},
+		{
+			"name": "images",
+			"path": "../../../Downloads/figma-to-html/images"
+		}
+	],
+	"settings": {}
+}
