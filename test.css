@@ -1,10 +1,8 @@
-/* @font-face {
-    font-family: 'MiSansThai';
-    src: url('Fonts/MiSansThai-Normal.woff') format('woff2'), 
-         url('Fonts/MiSansThai-Normal.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
+@font-face {
+  font-family: Misans;
+  src: url(font/MiSansThai-Normal.woff2) format("woff2"),
+       url(font/MiSansThai-Normal.woff) format("woff");
+}
 .card {
  width: 100%;
   height:520px;
@@ -62,6 +60,7 @@ height: 400px;
   margin-left: 24px;     
   font-size: 14px; 
   margin-top: 2px;       
+
  
        
 }
@@ -78,6 +77,8 @@ height: 400px;
    
         padding: 4px 40px;
         margin-left: 0px;  
+        color : rgb(0, 0, 0);
+        font-weight: 600;
        
     }
 }
@@ -409,23 +410,121 @@ body::-webkit-scrollbar {
   transition: transform .3s ease-in-out;
 }
 .Explain{
-  background-color: #da5959;
- 
- 
+  font-size: 20px;
+  font-family: 'Misans', sans-serif;
+  /* background-color: #ee6666; */
+.paragraph{
+  margin-top: 24px;
+}
+background-color:rgba(255, 255, 255, 0.5) ;
+
+  
+}
+.Line{
+  background-color: #18272F;
+  height: 2px;
+  position: absolute;
+  width: 100vw;
 }
 .Operation{
  display: grid;
   
-  grid-template-columns: 1fr 2fr 1fr;  
+  grid-template-columns: 1fr 2fr  ;  
  
-  grid-template-rows:200px 200px; 
+  grid-template-rows:1fr 2fr; 
   gap: 24px;
-  padding: 24px;
-  background-color: aqua;
-  grid-template-areas: "box-1 box-2 box-3"
-                       "box-4 box-5 box-6"; 
+ padding-left: 24px;
+  
+ 
+  grid-template-areas: "box-1 box-2 "
+                       " box-5 box-5 "; 
   ;
 }
+.main-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;        
+    font-family: 'MiSans', sans-serif;
+    color: #18272F;      
+    font-weight: bold; 
+    
+}
+
+
+.main-title::before {
+    content: '';
+    width: 12px;       
+    height: 12px;
+    background-color: #da5959;
+    border-radius: 50%;  
+    display: inline-block;
+    
+    
+    box-shadow: 
+        0 0 0 4px rgba(236, 155, 155, 0.8),  
+        0 0 10px 2px rgba(243, 223, 223, 0.8), 
+        0 0 20px rgba(255, 191, 191, 0.8);   
+        
+    
+    animation: pulse-glow 2s infinite;
+}
+
+
+@keyframes pulse-glow {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.project-info-container {
+    font-family: 'MiSans', sans-serif; 
+    margin-top: 0px;
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+
+.info-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold; 
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+
+.info-label .icon {
+    font-size: 18px;
+    color: #ee6666; 
+}
+
+
+.info-value {
+    font-size: 16px;
+    color: #7D7D7D; 
+    text-align: right;
+}
+
+
+.info-row:last-child {
+    border-bottom: none;
+}
+.imgw{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
 /* Presentational Styles */
 
 
