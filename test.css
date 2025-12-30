@@ -38,6 +38,7 @@ justify-content: flex-start;
   align-items: center;       
   min-height: 100vh;          */
   background-color: #d6d6d0;
+  overflow-x: hidden;
 }
 .card-image img {
   width: 100%;
@@ -349,6 +350,7 @@ border: 1px solid rgba(255, 255, 255, 0.23);
 }
 
 body::-webkit-scrollbar {
+
   display: none;
 }
 .type{
@@ -432,7 +434,7 @@ transition: all 0.3s ease;
   background-color: #18272F;
   height: 2px;
   position: absolute;
-  width: 120vw;
+  width: 100%;
 }
 .Operation{
  display: grid;
