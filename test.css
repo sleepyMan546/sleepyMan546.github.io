@@ -437,7 +437,7 @@ transition: all 0.3s ease;
 .Operation{
  display: grid;
   
-  grid-template-columns: 30vw  70vw  ;  
+  grid-template-columns: 32%  70%  ;  
  
   grid-template-rows:auto auto auto; 
   gap: 24px;
@@ -448,7 +448,8 @@ transition: all 0.3s ease;
                        " box-5 box-2"
                        "box-3 box-2"
                        "box-4 box-6"
-                       "box-7 box-8"; ;
+                       "box-7 box-8"
+                       "box-9 box-10"; ;
 }
 .Operation_img{
   object-fit: cover;
