@@ -421,13 +421,13 @@ transition: all 0.3s ease;
 
   
 }
-.Explain :hover{
+/* .Explain :hover{
   transition: scale 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   scale: 1.05;
   z-index: 100;
   transform: translateX(16px);
-  /* backdrop-filter: blur(15px); */
-}
+   backdrop-filter: blur(15px); 
+} */
 .Line{
   background-color: #18272F;
   height: 2px;
@@ -449,7 +449,18 @@ transition: all 0.3s ease;
                        "box-3 box-2"
                        "box-4 box-6"
                        "box-7 box-8"
-                       "box-9 box-10"; ;
+                       "box-9 box-10"
+                       "box-11 box-11"
+                       "box-12 box-12"
+                       "box-13 box-13"
+                       "box-14 box-14"
+                       "box-15 box-15"
+                       "box-16 box-16"
+                       "box-17 box-17"
+                       "box-18 box-18"
+                       "box-19 box-19"
+                     
+                       ; ;
 }
 .Operation_img{
   object-fit: cover;
