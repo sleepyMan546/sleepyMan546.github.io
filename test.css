@@ -311,6 +311,28 @@ width: 100%;
   border-radius: 20px;       
   overflow: hidden;  
 }
+.download{
+
+  z-index: 10000; 
+  
+ 
+  background: rgba(71, 71, 71, 0.1); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  
+
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  min-width: 100px
+  
+}
+.download_text{
+  font-size: 72px;
+  font-family: 'Poppins', sans-serif;
+  color : gray;
+}
 .containts_2{
  grid-row: span 2; 
   
@@ -349,10 +371,10 @@ border: 1px solid rgba(255, 255, 255, 0.23);
     color : white;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
 
   display: none;
-}
+} */
 .type{
   /* background-color: #da5959; */
   display: flex;
@@ -447,7 +469,7 @@ transition: all 0.3s ease;
   
  
   grid-template-areas: "box-1 box-2 "
-                       " box-5 box-2"
+                   
                        "box-3 box-2"
                        "box-4 box-6"
                        "box-7 box-8"
@@ -462,7 +484,8 @@ transition: all 0.3s ease;
                        "box-18 box-18"
                        "box-19 box-19"
                      
-                       ; ;
+                     
+                        ;
 }
 .Operation_img{
   object-fit: cover;
