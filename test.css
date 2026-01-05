@@ -487,6 +487,12 @@ transition: all 0.3s ease;
                      
                         ;
 }
+.frame{
+ 
+  position: absolute;
+  z-index: 10;
+  
+}
 .Operation_img{
   object-fit: cover;
   width: 100%;
