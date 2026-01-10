@@ -20,7 +20,17 @@
 </head>
   
 <body>
-   <header class="topbar"> <div><h1 class="Project">Portfolio</h1></div> </header>
+
+  
+  <div class = "loader">
+    <div class="counter">
+    <h2 class="number">11 <span>%</span></h2>
+    <div class="progress"> 
+        <div class="percentBar"></div>
+    </div>
+  </div>
+</div>
+  <header class="topbar"> <div><h1 class="Project">HOME</h1></div> </header>
    <div class="Internship"><h2 class="main-title">ตำแหน่งฝึกงานที่สนใจ (Internship Seeker)</h2>
       <div class="Line"></div>
       <p class="paragraph">
@@ -33,7 +43,7 @@
  
  
  
-        <nav class="glass-nav">
+     <nav class="glass-nav">
   <ul class="nav-links">
     <li>
       <a href="index.html" class="nav-item active">
@@ -48,7 +58,7 @@
       </a>
     </li>
     <li>
-      <a href="settings.html" class="nav-item">
+      <a href="about.html" class="nav-item">
        
         <span class="text">About</span>
       </a>
@@ -74,6 +84,26 @@
             
             
     </div>
+  <script>
+   let i = 0;
+   let number = document.querySelector('.number');
+   let percentBar = document.querySelector('.percentBar');
+   let loader = document.querySelector('.loader');
+   let interval = setInterval(function()  {
+    number.innerHTML = i+'<span>%</span>';
+    percentBar.style.width = i+'%';
+    i++
+    if(i == 101){
+        clearInterval(interval);
+        setTimeout(function(){
+            loader.style.opacity = '0';
+            loader.style.visibilitynone = 'hidden';
+        },1000);
+    }
+    
+   },100)
+ 
+  </script>
 
 
 </body>

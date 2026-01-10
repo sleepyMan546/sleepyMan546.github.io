@@ -679,6 +679,59 @@ transition: all 0.3s ease;
   }
 }
 
+.loader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #d6d6d0;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  padding-bottom: 4%;
+ display: flex;
+ justify-content: flex-end;
+ align-items: end;
+}
+.counter{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.counter .number{
+  position: absolute;
+  color :aliceblue;
+  font-size: 10vw ;
+  font-weight: 300;
+  font-family: "Popins", sans-serif;
+  bottom: 4vw;
+  right:4vw;
+  color :#18272F
+
+ 
+}
+
+.connter .number {
+  font-size: 0.5em;
+}
+.progress{
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: #cacaca;
+}
+
+.progress .percentBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11%;
+  height: 100%;
+  background: #18272F;
+
+}
+
 /* Presentational Styles */
 
 
