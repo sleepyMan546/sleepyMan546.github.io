@@ -36,35 +36,10 @@
       <p class="paragraph">
         ตำแหน่งหลัก : Artist Marketing <br>
 ตำแหน่งรอง : Graphic Design | UX/UI Design | Game Developer <br> ผมกำลังมองหาที่ฝึกงานเพื่อพัฒนาทักษะด้านการออกแบบและนำเสนอแนวคิดใหม่ๆเกี่ยวกับเกม</p></div>
-   
+  
+
  
  
- 
- 
- 
- 
-     <nav class="glass-nav">
-  <ul class="nav-links">
-    <li>
-      <a href="index.html" class="nav-item active">
-       
-        <span class="text">Home</span>
-      </a>
-    </li>
-    <li>
-      <a href="project.html" class="nav-item">
-        
-        <span class="text">Project</span>
-      </a>
-    </li>
-    <li>
-      <a href="about.html" class="nav-item">
-       
-        <span class="text">About</span>
-      </a>
-    </li>
-  </ul>
-</nav>
     <div class="containt">
          
             <div class="containts_1">
@@ -84,6 +59,31 @@
             
             
     </div>
+
+ 
+     <nav class="glass-nav">
+  <ul class="nav-links">
+    <li>
+      <a href="home.html" class="nav-item active">
+       
+        <span class="text">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="project.html" class="nav-item">
+        
+        <span class="text">Project</span>
+      </a>
+    </li>
+    <li>
+      <a href="about.html" class="nav-item">
+       
+        <span class="text">About</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+   
   <script>
    let i = 0;
    let number = document.querySelector('.number');
@@ -96,8 +96,8 @@
     if(i == 101){
         clearInterval(interval);
         setTimeout(function(){
-            loader.style.opacity = '0';
-            loader.style.visibilitynone = 'hidden';
+                 loader.style.visibility = 'hidden';
+        loader.style.pointerEvents = 'none';
         },1000);
     }
     
