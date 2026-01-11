@@ -820,7 +820,7 @@ filter: grayscale(100%);
  .item_frame img{
  object-fit: contain;    
 
-    width: auto;
+    width: 60px;
    height: 60px;
       transition: all 0.5s ease;
  
@@ -828,8 +828,8 @@ filter: grayscale(100%);
 
  .logo_facebook {
   
-    width: auto;
-   height: 40px;
+    width: 60px;
+   height: 60px;
     background-image: url('img/Facebook.svg');  
     background-size: contain;
     background-repeat: no-repeat;
@@ -839,7 +839,7 @@ filter: grayscale(100%);
  }
   .logo_Email {
     
-      width: auto;
+      width: 32px;
     height: 32px;
       background-image: url('img/Gmail_Logo.svg');  
       background-size: contain;
@@ -849,8 +849,8 @@ filter: grayscale(100%);
   }
    .logo_git {
     
-      width: auto;
-    height: 40px;
+      width: 60px;
+    height: 60px;
       background-image: url('img/Github.svg');  
       background-size: contain;
       background-repeat: no-repeat;
