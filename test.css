@@ -830,7 +830,7 @@ filter: grayscale(100%);
   
     width: 60px;
    height: 60px;
-    background-image: url('img/Facebook.svg');  
+    background-image: url('Img/Facebook.svg');  
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -841,7 +841,7 @@ filter: grayscale(100%);
     
       width: 32px;
     height: 32px;
-      background-image: url('img/Gmail_Logo.svg');  
+      background-image: url('Img/Gmail_Logo.svg');  
       background-size: contain;
       background-repeat: no-repeat;
       
@@ -851,7 +851,7 @@ filter: grayscale(100%);
     
       width: 60px;
     height: 60px;
-      background-image: url('img/Github.svg');  
+      background-image: url('Img/Github.svg');  
       background-size: contain;
       background-repeat: no-repeat;
         
