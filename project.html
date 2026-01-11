@@ -23,6 +23,7 @@
   
 <body>
    <header class="topbar"> <div><h1 class="Project">PROJECT</h1></div> </header>
+    <div class="glass-cursor"></div>
    <div class="type">
     
       <div class="bar">  <a href="#" class="all-item active "> 
@@ -106,14 +107,15 @@
 </nav>
     
 </div>
-<div class="cursor-glow"></div>
 <script>
-  const glow = document.querySelector('.cursor-glow');
-  document.addEventListener('mousemove', (e) => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
+  const glassCursor = document.querySelector('.glass-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    glassCursor.style.left = e.clientX + 'px';
+    glassCursor.style.top = e.clientY + 'px';
   });
 </script>
+
 
 </body>
 </html>

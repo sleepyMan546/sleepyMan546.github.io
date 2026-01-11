@@ -20,15 +20,26 @@
 </head>
   
 <body>
-
+<div class="glass-cursor"></div>
+  <canvas id="paintCanvas"></canvas>
   
-  
-  <header class="topbar"> <div><h1 class="Project">HOME</h1></div> </header>
-   <div class="Internship"><h2 class="main-title">ตำแหน่งฝึกงานที่สนใจ (Internship Seeker)</h2>
+  <header class="topbar"> <div>
+    <h1 class="Project">HOME</h1>
+    
+  </div> 
+</header>
+   <div class="Internship">
+    <h2 class="main-title">ตำแหน่งฝึกงานที่สนใจ (Internship Seeker)</h2>
       <div class="Line"></div>
       <p class="paragraph">
         ตำแหน่งหลัก : Artist Marketing <br>
-ตำแหน่งรอง : Graphic Design | UX/UI Design | Game Developer <br> ผมกำลังมองหาที่ฝึกงานเพื่อพัฒนาทักษะด้านการออกแบบและนำเสนอแนวคิดใหม่ๆเกี่ยวกับเกม</p></div>
+ตำแหน่งรอง : Graphic Design | UX/UI Design | Game Developer <br> ผมกำลังมองหาที่ฝึกงานเพื่อพัฒนาทักษะด้านการออกแบบและนำเสนอแนวคิดใหม่ๆเกี่ยวกับเกม</p>
+<h1 class="Projects">คลิกซ้ายวาดภาพในเว็บนี้</h1>
+
+<button onclick="ctx.clearRect(0, 0, canvas.width, canvas.height)" class="clear"><h3>Clear</h3></button>
+   
+    
+</div>
   
 
  
@@ -63,6 +74,70 @@
 </nav>
    
   
+<script>
+const canvas = document.getElementById('paintCanvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+let painting = false;
+let pixelSize = 24;   
+let hue = 0;
+
+function getPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  
+  const snapX = Math.floor(x / pixelSize) * pixelSize;
+  const snapY = Math.floor(y / pixelSize) * pixelSize;
+  return { x: snapX, y: snapY };
+}
+
+function startPosition(e) {
+  painting = true;
+  draw(e); 
+}
+
+function finishedPosition() {
+  painting = false;
+}
+
+const colors = [ '#da5959'];
+
+function draw(e) {
+  if (!painting) return;
+
+  const pos = getPos(e);
+  const randomIndex = Math.floor(Math.random() * colors.length); 
+  ctx.fillStyle = colors[randomIndex];
+  ctx.fillRect(pos.x, pos.y, pixelSize, pixelSize);
+}
+
+
+canvas.addEventListener('mousedown', startPosition);
+canvas.addEventListener('mouseup', finishedPosition);
+canvas.addEventListener('mouseleave', finishedPosition);
+canvas.addEventListener('mousemove', draw);
+</script>
+
+<script>
+  const glassCursor = document.querySelector('.glass-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    if (!glassCursor) return; 
+    glassCursor.style.left = e.clientX + 'px';
+    glassCursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+
 
 
 </body>

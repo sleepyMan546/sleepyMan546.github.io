@@ -21,8 +21,9 @@
 <!--   
   <header class="topbar-operation"> OPERATION ECLISPSE </header> -->
   <div><img src="Img/op.png"   alt="loading" class="Operation_img"></div>
- 
+  <div class="glass-cursor"></div>
  <div class="Operation"> 
+ 
     <div class="Explain" style="grid-area: box-1;">
       <h2 class="main-title">ภาพรวม (Overview)</h2>
       <div class="Line"></div>
@@ -125,5 +126,15 @@
     <a href="newdawn.html" class="footer-item">Next Project </a>
   </div>
 </footer>
+
+<script>
+  const glassCursor = document.querySelector('.glass-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    glassCursor.style.left = e.clientX + 'px';
+    glassCursor.style.top = e.clientY + 'px';
+  });
+</script>
+
 </body>
 </html>

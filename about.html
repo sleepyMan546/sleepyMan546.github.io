@@ -28,7 +28,7 @@
  
  
     <div class="containt_about">
-         
+            <div class="glass-cursor"></div>
             <div class="containts_1">
                 <h2 class="containt-title">Contract</h2>
                 <div class="contract_grid">
@@ -103,7 +103,14 @@
     </li>
   </ul>
 </nav>
-   
+   <script>
+  const glassCursor = document.querySelector('.glass-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    glassCursor.style.left = e.clientX + 'px';
+    glassCursor.style.top = e.clientY + 'px';
+  });
+</script>
   
 
 

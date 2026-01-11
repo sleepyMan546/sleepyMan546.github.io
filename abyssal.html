@@ -17,7 +17,7 @@
      </style>
 </head>
 <body>
-  
+  <div class="glass-cursor"></div>
    <div><img src="Img/abyssal_raid_banner.png" alt="Artwork" loading="lazy" class="Operation_img"></div>
 
  
@@ -120,5 +120,15 @@
     <a href="#" class="footer-item">Next Project </a>
   </div>
 </footer>
+
+<script>
+  const glassCursor = document.querySelector('.glass-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    glassCursor.style.left = e.clientX + 'px';
+    glassCursor.style.top = e.clientY + 'px';
+  });
+</script>
+
 </body>
 </html>
