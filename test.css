@@ -820,41 +820,44 @@ filter: grayscale(100%);
  .item_frame img{
  object-fit: contain;    
 
-    width: 60px;
-   height: 60px;
+    width: auto;
+   height: 52px;
       transition: all 0.5s ease;
  
  }
 
  .logo_facebook {
   
-    width: 60px;
-   height: 60px;
+    width: auto;
+   height: 52px;
     background-image: url('Img/Facebook.svg');  
     background-size: contain;
     background-repeat: no-repeat;
-
+   margin-top: 4px;
+   margin-bottom: 4px;
 
    
  }
   .logo_Email {
     
-      width: 32px;
-    height: 32px;
+      width: 50px;
+    height: 52px;
       background-image: url('Img/Gmail_Logo.svg');  
       background-size: contain;
       background-repeat: no-repeat;
+      margin-top: 8px;
       
     
   }
    .logo_git {
     
-      width: 60px;
-    height: 60px;
+      width: auto;
+    height: 52px;
       background-image: url('Img/Github.svg');  
       background-size: contain;
       background-repeat: no-repeat;
-        
+        margin-top: 4px;
+   margin-bottom: 4px;
     
   }
  
