@@ -112,7 +112,7 @@ function getPos(e) {
   const rect = canvas.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
-
+  
   
   const snapX = Math.floor(x / pixelSize) * pixelSize;
   const snapY = Math.floor(y / pixelSize) * pixelSize;
@@ -128,7 +128,7 @@ function finishedPosition() {
   painting = false;
 }
 
-const colors = ['#ff4b4b', '#da5959'];
+const colors = [ '#da5959'];
 
 function draw(e) {
   if (!painting) return;
