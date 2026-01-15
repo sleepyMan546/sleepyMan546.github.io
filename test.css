@@ -521,7 +521,7 @@ transition: all 0.3s ease;
  padding-left: 24px;
   
  
-  grid-template-areas: "box-1 box-2 "
+  grid-template-areas: "box-1 box-1 "
                    
                        "box-3 box-2"
                        "box-4 box-6"
