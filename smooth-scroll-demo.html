@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Navigation Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="smooth-scroll-styles.css">
+</head>
+<body>
+    <!-- Side Navigation Menu -->
+    <nav class="side-nav">
+        <ul class="nav-menu">
+            <li class="nav-item active">
+                <a href="#home" class="nav-link">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">หน้าหลัก</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">ตัวละคร · อาวุธ</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#lantern" class="nav-link">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">รางวัลเทศกาล Lantern Rite</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#activities" class="nav-link">
+                    <span class="nav-dot"></span>
+                    <span class="nav-text">ปฏิทินกิจกรรม</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Section 1: หน้าหลัก -->
+        <div id="home" class="scroll section">
+            <div class="section-content">
+                <h1 class="section-title">หน้าหลัก</h1>
+                <p class="section-description">
+                    ยินดีต้อนรับสู่โลกแห่งการผจญภัย เริ่มต้นการเดินทางของคุณท���่นี่
+                    พบกับเนื้อหาที่น่าตื่นเต้นและประสบการณ์ที่ไม่เหมือนใคร
+                </p>
+                <div class="content-box">
+                    <h3>เนื้อหาหลัก</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: ตัวละคร · อาวุธ -->
+        <div id="about" class="scroll section">
+            <div class="section-content">
+                <h1 class="section-title">ตัวละคร · อาวุธ</h1>
+                <p class="section-description">
+                    ค้นพบตัวละครที่หลากหลายและอาวุธที่ทรงพลัง 
+                    แต่ละตัวละครมีความสามารถพิเศษและเรื่องราวที่น่าสนใจ
+                </p>
+                <div class="content-grid">
+                    <div class="content-box">
+                        <h3>���ัวละครหลัก</h3>
+                        <p>ตัวละครที่มีค���ามสามารถพิเศษและเรื่องราวที่น่าติดตาม</p>
+                    </div>
+                    <div class="content-box">
+                        <h3>อาวุธและเครื่องมือ</h3>
+                        <p>อาวุธที่ทรงพลังและเครื่องมือที่จำเป็นสำหรับการผจญภัย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: รางวัลเทศกาล Lantern Rite -->
+        <div id="lantern" class="scroll section">
+            <div class="section-content">
+                <h1 class="section-title">รางวัลเทศกาล Lantern Rite</h1>
+                <p class="section-description">
+                    เข้าร่วมเทศกาลโคมไฟที่งดงามและรับรางวัลพิเศษมากมาย
+                    ประสบการณ์ที่ไม่ควรพลาดในช่วงเวลาแห่งการเฉลิมฉลอง
+                </p>
+                <div class="lantern-content">
+                    <div class="content-box highlight">
+                        <h3>รางวัลพิเศษ</h3>
+                        <p>รับรางวัลที่หายากและมีค่าจากการเข้าร่วมกิจกรรมเทศกาล</p>
+                    </div>
+                    <div class="content-box highlight">
+                        <h3>กิจกรรมเทศกาล</h3>
+                        <p>เข้าร่วมกิจกรรมสนุกสนานและท้าทายในช่วงเทศกาล</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: ปฏิทินกิจกรรม -->
+        <div id="activities" class="scroll section">
+            <div class="section-content">
+                <h1 class="section-title">ปฏิทินกิจกรรม</h1>
+                <p class="section-description">
+                    ติดตามกิจกรรมและเหตุการณ์สำคัญที่จะเกิดขึ้น
+                    วางแผนการเข้าร่วมกิจกรรมต่างๆ ให้เหมาะสม
+                </p>
+                <div class="calendar-content">
+                    <div class="content-box">
+                        <h3>กิจกรรมประจำสัปดา��์</h3>
+                        <p>กิจกรรมที่จัดขึ้นเป็นประจำทุกสัปดาห์</p>
+                    </div>
+                    <div class="content-box">
+                        <h3>เหตุการณ์พิเศษ</h3>
+                        <p>เหตุการณ์สำคัญที่จัดขึ้นในช่วงเวลาพิเศษ</p>
+                    </div>
+                    <div class="content-box">
+                        <h3>การอัปเดต</h3>
+                        <p>ข้อมูลการอัปเดตและเนื้อหาใหม่ๆ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="smooth-scroll-script.js"></script>
+</body>
+</html>
