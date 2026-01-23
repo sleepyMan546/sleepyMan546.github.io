@@ -270,7 +270,8 @@ justify-content: flex-start;
   border-radius: 15px;
   padding: 20px;
   min-height: 200px;
-
+width: 100%;
+height: auto;
 
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.24);
