@@ -1123,4 +1123,31 @@ html {
     margin: 0;
     margin-bottom: 12px;
   }
+
+  .Card_Element.mobile-full {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    height: auto;
+    padding: 24px;
+  }
+
+  .Card_Element.mobile-full .Title_Card {
+    margin-left: 0;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .Card_Element.mobile-full img {
+    margin-top: 24px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .Card_Element.mobile-full iframe {
+    width: 100% !important;
+    min-height: 400px;
+    height: auto;
+  }
 }
