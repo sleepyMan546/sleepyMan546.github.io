@@ -1161,10 +1161,15 @@ a {
   }
 
   .item_frame {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 12px;
-    gap: 10px;
+    padding: 24px;
+    gap: 12px;
+    grid-template-columns: none;
+    /* Override grid */
   }
 
   .item_frame img,
@@ -1172,10 +1177,28 @@ a {
   .logo_Email,
   .logo_git {
     margin: 0 auto;
+    height: 48px;
+    width: 48px;
+    /* Fixed width for icons */
+    display: block;
+    /* Ensure they appear */
+  }
+
+  .item_frame h3 {
+    font-size: 16px;
+    word-break: break-all;
+    /* Ensure long emails don't overflow */
+    margin-top: 8px;
   }
 
   .Resume_Profile img {
-    width: 50vw;
+    margin-top: 24px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
   /* Operation Page Specifics */
