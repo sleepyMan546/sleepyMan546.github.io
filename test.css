@@ -407,6 +407,10 @@ a {
   scale: 1.05;
   color: white;
   z-index: 0;
+
+  .download_text {
+    color: white;
+  }
 }
 
 .wrapper {
@@ -1225,6 +1229,10 @@ a {
     flex: none;
   }
 
+  .wrapper {
+    flex-direction: column;
+  }
+
   /* Footer */
   .download {
     position: relative;
@@ -1235,7 +1243,11 @@ a {
   }
 
   .download_text {
-    font-size: 3rem;
+    font-size: 2em;
+    margin: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
   }
 
   .footer-nav {
