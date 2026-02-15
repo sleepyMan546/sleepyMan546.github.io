@@ -3,6 +3,24 @@
    Used by: operation, newdawn, abyssal, missturer, graphic, video
    ============================================================ */
 
+/* ===== Font: Misans for Thai, Poppins for English ===== */
+@font-face {
+    font-family: Misans;
+    src: url(font/MiSansThai-Normal.woff2) format("woff2"),
+        url(font/MiSansThai-Normal.woff) format("woff");
+}
+
+/* Apply to all project pages that include this stylesheet */
+.op-page,
+.op-page p,
+.op-page h3,
+.op-page span,
+.op-hero-title h1,
+.bento-card,
+.bento-caption {
+    font-family: 'Poppins', 'Misans', sans-serif;
+}
+
 /* ===== Page wrapper ===== */
 .op-page {
     position: relative;

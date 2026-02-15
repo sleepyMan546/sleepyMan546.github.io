@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona — UI/UX Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="mesh-bg.css">
+    <link rel="stylesheet" href="op-layout.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #D6D6D0;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        /* Hero gradient — deep blue to match Frozen Crush theme */
+        .op-hero::after {
+            background: linear-gradient(to bottom, rgba(214, 214, 208, 0) 60%, rgba(30, 60, 120, 0.85) 100%);
+        }
+
+        .op-hero-title h1 {
+            color: #fff;
+        }
+
+        /* Version badge */
+        .version-badge {
+            display: inline-block;
+            background: rgba(30, 60, 120, 0.15);
+            color: #1a3c78;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(30, 60, 120, 0.2);
+            margin-bottom: 8px;
+        }
+
+        /* A/B badge accent */
+        .ab-badge {
+            background: rgba(220, 50, 50, 0.1);
+            color: #c0392b;
+            border-color: rgba(220, 50, 50, 0.2);
+        }
+
+        /* Result highlight */
+        .result-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a3c78, #2980b9);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 22px;
+            margin: 8px 0;
+        }
+
+        /* Description placeholder styling */
+        .desc-placeholder {
+            border-left: 3px solid rgba(30, 60, 120, 0.3);
+            padding-left: 16px;
+            color: #666;
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-cursor"></div>
+    <div class="mesh-bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <div class="op-hero">
+        <img src="Img/Mockup_5.webp" alt="Frozen Crush — User Persona Case Study">
+        <div class="op-hero-title">
+            <h1>User Persona</h1>
+        </div>
+    </div>
+
+    <!-- ===== Page ===== -->
+    <div class="op-page">
+
+        <!-- ======================== -->
+        <!--        OVERVIEW          -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">ภาพรวม (Overview)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-2">
+                <h3>UI/UX Case Study — Puzzle Game</h3>
+                <p>
+                    โปรเจ็คนี้เป็นการออกแบบ UI/UX สำหรับเกมแนว Puzzle (Match-3)
+                    โดยเริ่มจากการสร้าง User Persona เพื่อเข้าใจกลุ่มเป้าหมาย แล้วนำมาออกแบบ UI
+                    ผ่าน 5 Iterations พัฒนาจาก Mockup V.1 ถึง V.5
+                    โดยมีการทำ A/B Testing เก็บ Feedback จากผู้ใช้จริงเพื่อปรับปรุงอย่างต่อเนื่อง
+                </p>
+            </div>
+            <div class="bento-card bento-card--text span-1">
+                <div class="op-info-table">
+                    <div class="op-info-row">
+                        <span class="op-info-label">Type</span>
+                        <span class="op-info-value">UX/UI Case Study</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Role</span>
+                        <span class="op-info-value">Solo — UX Research / UI Design</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Software</span>
+                        <span class="op-info-value">Figma / Google Forms</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Team Size</span>
+                        <span class="op-info-value">1 คน (ทำคนเดียวทั้งหมด)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--      USER PERSONA        -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">User Persona</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--img span-3">
+                <img src="Img/User Persona.webp" alt="User Persona" loading="lazy">
+            </div>
+        </div>
+        <div class="bento op-fade-in" style="margin-top: 12px;">
+            <div class="bento-card bento-card--text span-3">
+                <h3>จุดเริ่มต้นจาก User Persona</h3>
+                <p>
+                    เริ่มจากสร้าง User Persona เพื่อทำความเข้าใจกลุ่มเป้าหมาย
+                    วิเคราะห์พฤติกรรม ความชอบ และ Pain Points ของผู้เล่น
+                    แล้วนำข้อมูลเหล่านี้มาเป็นแนวทางในการออกแบบ UI
+                </p>
+                <p class="desc-placeholder">ผมได้ใช้หลักการ Design Thinking ในการออกแบบ UI
+                    โดยเริ่มจากการทำความเข้าใจกลุ่มเป้าหมาย
+                    วิเคราะห์พฤติกรรม ความชอบ และ Pain Points ของผู้เล่น
+                    แล้วนำข้อมูลเหล่านี้มาเป็นแนวทางในการออกแบบ UI
+                    Star Method ในการทำUX/UI</p>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       MOCKUP V.1         -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">Design Iteration</h2>
+
+        <!-- V.1 -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;" id="v1">
+            <div class="bento-card bento-card--text span-1">
+                <span class="version-badge">VERSION 1</span>
+                <h3>Mockup V.1 — Candy Herb</h3>
+                <p>
+                    Version แรก Theme Candy Crush ใช้สีเขียวเป็นหลัก
+                    วาง Layout เบื้องต้นตาม Visual Hierarchy ที่ได้จาก User Persona
+                </p>
+                <p class="desc-placeholder">Situation: ผมเริ่มจากการออกแบบ Candy Crush theme Herb <br>
+                    Task: ผมวางแผนว่าจะใช้สีเขียวโทนอ่อน เน้นนำเสนอความเรียบง่ายและความทันสมัย <br>
+                    Action: ผมออกแบบโดยใช้ Glassmorphism เพื่อนำเสนอความทันสมัย การใช้หลักการ Visual Hierarchy ออกแบบ
+                    <br>
+                    สิ่งที่ต้องการให้ User มองเห็นมีขนาดใหญ่กว่าปกติ และการใช้สีเขียวเป็นเหมือนการนำสายตา user <br>
+                    Result:ได้รับFeedback จากPersonar หลายอย่างมีความสว่างมากเหมือนทุกอย่างเด่นเท่ากันหมด
+                </p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/Mockup_1.webp" alt="Mockup V.1 — Candy Herb" loading="lazy">
+            </div>
+        </div>
+
+        <!-- V.2 -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;" id="v2">
+            <div class="bento-card bento-card--text span-1">
+                <span class="version-badge">VERSION 2</span>
+                <h3>Mockup V.2 — ปรับปรุง Visual</h3>
+                <p>
+                    ปรับ Visual Hierarchy ให้ดีขึ้น เพิ่ม Contrast ให้ชัดเจน
+                    แก้ไข UI จากข้อเสนอแนะที่ได้จาก Persona
+                </p>
+                <p class="desc-placeholder">Task: ผมต้องเพิ่ม Visual Hierarchy ให้ชัดเจนและใช้Contrast ให้ดีมากขึ้น
+                    Action: ผมออกแบบรูปทรงของปุ่มให้มีความโค้งเพื่อให้ดูมีความน่ารัก น่าเล่นเพิ่ม Contrast
+                    ที่มากขึ้นมีการใช้หลักการHidden
+                    เพื่อให้UI เรียบง่าย <br>
+                    Result: Personar มีความชอบมากแต่ให้เหตุผลว่ามันดูไม่เหมือนเป็นเกมที่ผู้หญิงจะเล่นได้ <br>
+                    คล้ายเกมที่ออกแบบมาให้ผู้ชายเล่นมากกว่า
+                    มันดุไม่มีความเกี่ยวข้องกับสมุนไพรเลย</p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/Mockup_2.webp" alt="Mockup V.2 — Candy Herb Refined" loading="lazy">
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       A/B TESTING        -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">A/B Testing</h2>
+
+        <!-- V.3 (A) -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;" id="v3">
+            <div class="bento-card bento-card--text span-1">
+                <span class="version-badge ab-badge">A/B TEST — ชุด A</span>
+                <h3>Mockup V.3 — Frozen Crush (A)</h3>
+                <p>
+                    เปลี่ยน Theme เป็น Frozen Crush ตาม Persona ที่ชื่นชอบ Genshin Impact
+                    ใช้โทนสีน้ำเงิน-ขาว เพื่อเพิ่ม Contrast และความสวยงาม
+                </p>
+                <p class="desc-placeholder">Task: ผมต้องทำ Ui ให้สามารถสื่อสารได้ถูกต้องตามTheme
+                    UIต้องสามารถเล่นได้ทุกเพศ <br>
+                    Action: ผมเลือกที่จะเปลี่ยน Theme เพื่อสื่อสารได้ง่ายขึ้น และพยายามทำให้คล้ายเกม genshin Impact
+                    เนื่องจากpersonar มีความชอบเกมนี้ <br>
+                    Result: Personar มีความชอบมากในทุกส่วน ดูเรียบง่ายเข้าใจง่าย</p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/Mockup_3.webp" alt="Mockup V.3 — A/B Test ชุด A" loading="lazy">
+            </div>
+        </div>
+
+        <!-- V.4 (B) -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;" id="v4">
+            <div class="bento-card bento-card--text span-1">
+                <span class="version-badge ab-badge">A/B TEST — ชุด B</span>
+                <h3>Mockup V.4 — Frozen Crush (B)</h3>
+                <p>
+                    ปรับ Layout ตาม Feedback
+                    เปลี่ยน Button Style ให้ชัดเจนขึ้น เพิ่มขอบปุ่มและ Contrast
+                </p>
+                <p class="desc-placeholder">Task: ผมรู้สึกว่า Uiดีกว่านี้ได้จึงทำ A/B Testingเพื่อดูว่าการจัด Layout
+                    แบบไหนมีความน่าสนใจมากกว่ากัน <br>
+                    Action: ผมเริ่มทำ MockupV4 ที่แก้layout บางหน้าเพื่อเก็บFeedback จากเพื่อนในห้องผ่านGoogle Form <br>
+                    Result: ผลลัพธ์คือเพื่อชอบ Layout MockupV4หน้าท้ายมากกว่า V3</p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/Mockup_4.webp" alt="Mockup V.4 — A/B Test ชุด B" loading="lazy">
+            </div>
+        </div>
+
+        <!-- A/B Testing Result -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;">
+            <div class="bento-card bento-card--text span-1">
+                <h3>ผลลัพธ์ A/B Testing</h3>
+                <p>
+                    เก็บ Feedback จากผู้ใช้จริง 23 คนผ่าน Google Forms
+                </p>
+                <div style="text-align:center; margin: 12px 0;">
+                    <span class="result-highlight">73.9% เลือก ชุด B</span>
+                </div>
+                <p>
+                    ผู้ใช้ส่วนใหญ่เลือก V.4 (ชุด B) เนื่องจากปุ่มชัดเจนกว่า
+                    อ่านง่ายกว่า และ Layout สมดุลกว่า
+                </p>
+                <p class="desc-placeholder">
+                </p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/ABtesting_Googleform.png" alt="A/B Testing Results — Google Form" loading="lazy">
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       FINAL RESULT       -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">ผลลัพธ์สุดท้าย (Final)</h2>
+
+        <!-- V.5 -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;" id="v5">
+            <div class="bento-card bento-card--text span-1">
+                <span class="version-badge"
+                    style="background:rgba(39,174,96,0.12); color:#27ae60; border-color:rgba(39,174,96,0.25);">FINAL
+                    VERSION</span>
+                <h3>Mockup V.5 — Frozen Crush (Final)</h3>
+                <p>
+                    Version สุดท้ายที่ปรับปรุงจากผลลัพธ์ A/B Testing
+                    นำ Feedback ทั้งหมดมาปรับปรุง — เพิ่ม Contrast สร้างความสมดุลของ Layout
+                    และปรับ Visual ให้สอดคล้องกับ Persona
+                </p>
+                <p class="desc-placeholder">Task: จากการทำ A/B Testing
+                    ผมได้รับFeedbackมาเยอะมากคิดว่าจะปรับปรุงให้ดึตามFeedback <br>
+                    Action: ผมแก้พื้นหลังให้ดูง่ายมากที่สุด เน้นไปที่Contrast ความเรียบง่าย ลดทอนหลายๆส่วน<br>
+                    Result: ผมคิดว่าUIนี้ใช้ได้แล้ว</p>
+            </div>
+            <div class="bento-card bento-card--img span-2">
+                <img src="Img/Mockup_5.webp" alt="Mockup V.5 — Final Version" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-3">
+                <h3>สิ่งที่ได้เรียนรู้ (Takeaways)</h3>
+                <p class="desc-placeholder">ผมได้เรียนรู้ว่าการทำ UX/UI ไม่ใช่แค่การออกแบบให้สวยงาม
+                    แต่ต้องคำนึงถึงผู้ใช้เป็นหลัก
+                    มีการทำ A/B Testing เก็บ Feedback จากผู้ใช้จริงเพื่อปรับปรุงอย่างต่อเนื่อง
+                    และนำข้อมูลเหล่านี้มาเป็นแนวทางในการออกแบบ UI
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== Nav ===== -->
+    <nav class="glass-nav">
+        <ul class="nav-links">
+            <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+            <li><a href="project.html" class="nav-item active"><span class="text">Project</span></a></li>
+            <li><a href="about.html" class="nav-item"><span class="text">About</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer-nav">
+        <div class="footer-content">
+            <a href="project.html" class="footer-item">Go Back</a>
+            <a href="operation.html" class="footer-item">Next Project</a>
+        </div>
+    </footer>
+
+    <script>
+        const glassCursor = document.querySelector('.glass-cursor');
+        window.addEventListener('mousemove', (e) => {
+            glassCursor.style.left = e.clientX + 'px';
+            glassCursor.style.top = e.clientY + 'px';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
+    </script>
+    <script src="lightbox.js"></script>
+</body>
+
+</html>
