@@ -1,218 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N.E.W.D.A.W.N.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bg.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="mesh-bg.css">
+    <link rel="stylesheet" href="op-layout.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="preload" as="image" href="Img/Newdawn_banner.webp">
-     <style>
-       * {
+    <style>
+        * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
-            
+            box-sizing: border-box;
         }
-     
-     </style>
+
+        body {
+            background: #D6D6D0;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+    </style>
 </head>
+
 <body>
     <div class="glass-cursor"></div>
-    
-    <!-- Side Navigation Menu -->
-    <!-- <nav class="side-nav">
-        <ul class="nav-menu">
-            <li class="nav-item active">
-                <a href="#overview" class="nav-link">
-                    <span class="nav-dot"></span>
-                    <span class="nav-text">ภาพรวม</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#features" class="nav-link">
-                    <span class="nav-dot"></span>
-                    <span class="nav-text">จุดเด่นเกม</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#elements" class="nav-link">
-                    <span class="nav-dot"></span>
-                    <span class="nav-text">องค์ประกอบเกม</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#characters" class="nav-link">
-                    <span class="nav-dot"></span>
-                    <span class="nav-text">ตัวละคร</span>
-                </a>
-            </li>
-        </ul>
-    </nav> -->
+    <div class="mesh-bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
+    </div>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Banner Section -->
-        <section id="banner" class="scroll-section">
-            <div>
-                <img src="Img/Newdawn_banner.webp" alt="N.E.W.D.A.W.N. Game Banner" class="Operation_img">
+    <!-- ===== Hero ===== -->
+    <div class="op-hero">
+        <img src="Img/Newdawn_banner.webp" alt="N.E.W.D.A.W.N. Game Banner">
+        <div class="op-hero-title">
+            <h1>N.E.W.D.A.W.N.</h1>
+        </div>
+    </div>
+
+    <!-- ===== Page ===== -->
+    <div class="op-page">
+
+        <!-- ======================== -->
+        <!--        OVERVIEW          -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">ภาพรวม (Overview)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-2">
+                <h3>เกม Soul-like ยิงปืนสุดมันส์</h3>
+                <p>
+                    เกม Soul-like ยิงปืน ผู้เล่นต้องต่อสู้กับศัตรูที่มีหลายชนิด เช่น ศัตรูโจมตีใกล้ กลาง และไกล
+                </p>
             </div>
-        </section>
-
-        <!-- Overview Section -->
-        <section id="overview" class="scroll-section">
-            <div class="Operation"> 
-                <div class="Explain" style="grid-area: box-1;">
-                    <h2 class="main-title">ภาพรวม (Overview)</h2>
-                    <div class="Line"></div>
-                    <p class="paragraph">
-                        เกมSoul-likeยิงปืน ผู้เล่นต้องต่อสู้กับศัตรูที่มีหลายชนิด เช่น ศัตรูโจมตีใกล้ กลางและไกล
-                    </p>
-                    <div class="project-info-container">
-                        <div class="info-row">
-                            <div class="info-label">หมวดหมู่เกม (Genre)</div> 
-                            <div class="info-value">Action / Soul-like</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">ตำแหน่ง (Role)</div>
-                            <div class="info-value">Game Developer / Graphic Design</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">ซอฟต์แวร์ (Software)</div>
-                            <div class="info-value">Unreal Engine / Photoshop / Github / Docs</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">สมาชิกทีม (Team Size)</div>
-                            <div class="info-value">3 คน</div>
-                        </div>
+            <div class="bento-card bento-card--text span-1">
+                <div class="op-info-table">
+                    <div class="op-info-row">
+                        <span class="op-info-label">Genre</span>
+                        <span class="op-info-value">Action / Soul-like</span>
                     </div>
-                </div>
-                <div class="Explain" style="grid-area: box-2;"></div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="scroll-section">
-            <div class="Operation">
-                <div class="Explain" style="grid-area: box-3;">
-                    <h2 class="main-title">จุดเด่นเกม (Key Features)</h2>
-                    <div class="Line"></div>
-                </div>
-                <div class="Explain" style="grid-area: box-4;">
-                    <div class="bento-grid1">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="Img/AI_Banner.png" loading="lazy" alt="AI Behavior Tree">
-                            </div>
-                            <div class="card-content">
-                                <h2 class="card-title">AI Behavior Tree</h2>
-                                <div class="card-description">
-                                    เกมนี้มีระบบ AI ที่ใช้ Behavior Tree เพื่อควบคุมพฤติกรรมของศัตรูAI ในเกมนี้มี 3 ประเภทได้แก่ 
-                                    <br>1.AI ตีใกล้ ทำหน้าที่วิ่งเข้าหาผู้เล่นแล้วโจมตีเมื่อHPเหลือครึ่งนึงจะบ้าคลั่ง  
-                                    <br>2.AI ตีกลาง ทำหน้าที่ยิงปืนไปยังผู้เล่นระหว่างนั้นจะรักษาระยะห่างเมื่อผู้เล่นเดินเข้าใกล้เกินไป
-                                    <br>3.AI ตีไกล จะยืนโจมตีจากระยะไกล
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="Img/Art_style.png" loading="lazy" alt="Art Style">
-                            </div>
-                            <div class="card-content">
-                                <h2 class="card-title">Art Style</h2>
-                                <p class="card-description">
-                                    นำเสนอภาพในสไตล์ Cel Shade มีการสร้าง post process volume ขึ้นมาใหม่เพื่อให้มีความเหมาะสมกับงานภาพของเกม
-                                    รวมถึงการ Render outline ของวัตถุต่างๆภายในเกมและมีการใช้Level Design , Naigara VFX
-                                </p>
-                            </div>
-                        </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Role</span>
+                        <span class="op-info-value">Game Developer / Graphic Design</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Software</span>
+                        <span class="op-info-value">Unreal Engine / Photoshop / Github</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Team Size</span>
+                        <span class="op-info-value">3 คน</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Elements Section -->
-        <section id="elements" class="scroll-section">
-            <div class="Operation">
-                <div class="Explain" style="grid-area: box-5;">
-                    <h2 class="main-title">องค์ประกอบของเกม (Element)</h2>
-                    <div class="Line"></div>
-                    <p class="paragraph">
-                        เกมประกอบด้วยระบบต่างๆ ที่ทำงานร่วมกันเพื่อสร้างประสบการณ์การเล่นที่สมบูรณ์
-                    </p>
+        <!-- ======================== -->
+        <!--      KEY FEATURES        -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">จุดเด่นเกม (Key Features)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--img span-1 h-350">
+                <img src="Img/AI_Banner.png" loading="lazy" alt="AI Behavior Tree">
+                <div class="bento-caption">
+                    <h4>AI Behavior Tree</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">AI</span>
+                        <span class="bento-tag">SYSTEM</span>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="bento-card bento-card--text span-2">
+                <h3>AI Behavior Tree</h3>
+                <p>
+                    เกมนี้มีระบบ AI ที่ใช้ Behavior Tree เพื่อควบคุมพฤติกรรมของศัตรู AI ในเกมนี้มี 3 ประเภทได้แก่
+                    1. AI ตีใกล้ ทำหน้าที่วิ่งเข้าหาผู้เล่นแล้วโจมตี เมื่อ HP เหลือครึ่งนึงจะบ้าคลั่ง
+                    2. AI ตีกลาง ทำหน้าที่ยิงปืนไปยังผู้เล่น ระหว่างนั้นจะรักษาระยะห่างเมื่อผู้เล่นเดินเข้าใกล้เกินไป
+                    3. AI ตีไกล จะยืนโจมตีจากระยะไกล
+                </p>
+            </div>
+        </div>
 
-        <!-- Characters Section -->
-        <section id="characters" class="scroll-section">
-            <div class="characters-container">
-                <div class="Element"> 
-                    <h3 class="Title_Card">Main Character</h3>
-                    <img src="Img/Main_Chracter.png" alt="Main Character" loading="lazy" class="Operation_img">
-                    <img src="Img/Attack_combo.png" alt="Attack Combo" loading="lazy" class="Operation_img">
-                    <img src="Img/Lock.png" alt="Lock System" loading="lazy" class="Operation_img">
-                    <img src="Img/Dash.png" alt="Dash Mechanic" loading="lazy" class="Operation_img">
-                    <img src="Img/skill_system.png" loading="lazy" alt="Skill System" class="Operation_img">
-                </div>
-
-                <div class="Element"> 
-                    <h3 class="Title_Card">ShotGun Character</h3>
-                    <img src="Img/shootgun_chracter.webp" alt="Shotgun Character" loading="lazy" class="Operation_img">
-                    <img src="Img/BT_shotgun.webp" alt="Shotgun Behavior Tree" loading="lazy" class="Operation_img">
-                    <iframe width="100%" height="800" src="https://www.youtube.com/embed/3bHGQWfTT7g?si=O_0wZ6AX8LdTvAMM" title="Shotgun Character Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="Element"> 
-                    <h3 class="Title_Card">SMG Character</h3>
-                    <img src="Img/SMG_Chracter.webp" alt="SMG Character" loading="lazy" class="Operation_img">
-                    <img src="Img/BT_SMG.webp" alt="SMG Behavior Tree" loading="lazy" class="Operation_img">
-                    <iframe width="100%" height="800" src="https://www.youtube.com/embed/3gtBfLWnySM?si=8U3lAloPhvGnywwe" title="SMG Character Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="Element"> 
-                    <h3 class="Title_Card">HeavyMachineGun Character</h3>
-                    <img src="Img/Machinegun_Chracter.webp" alt="Machine Gun Character" loading="lazy" class="Operation_img">
-                    <img src="Img/BT_ MachineGun.webp" alt="Machine Gun Behavior Tree" loading="lazy" class="Operation_img">
-                    <iframe width="100%" height="800" src="https://www.youtube.com/embed/fjH4kpsdTn8?si=QuWR-gwg9rflOeGY" title="Machine Gun Character Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="Element"> 
-                    <h3 class="Title_Card">The B.o.s.s</h3>
-                    <img src="Img/TheBoss_Chracter.webp" alt="Boss Character" loading="lazy" class="Operation_img">
-                    <img src="Img/BT_ TheBoss.webp" alt="Boss Behavior Tree" loading="lazy" class="Operation_img">
-                    <iframe width="100%" height="800" src="https://www.youtube.com/embed/5DApemon3YA?si=-49A2-bUDNenkG6e" title="Boss Character Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="Element"> 
-                    <h3 class="Title_Card">Video Walkthrough</h3>
-                    <iframe width="100%" height="800" src="https://www.youtube.com/embed/F9RtOhOvI0Q?si=Z5Cxgc4GiOHB4ySB" title="Game Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="bento op-fade-in" style="margin-top:12px;">
+            <div class="bento-card bento-card--text span-2">
+                <h3>Art Style</h3>
+                <p>
+                    นำเสนอภาพในสไตล์ Cel Shade มีการสร้าง Post Process Volume
+                    ขึ้นมาใหม่เพื่อให้มีความเหมาะสมกับงานภาพของเกม
+                    รวมถึงการ Render Outline ของวัตถุต่างๆ ภายในเกม และมีการใช้ Level Design, Niagara VFX
+                </p>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-350">
+                <img src="Img/Art_style.png" loading="lazy" alt="Art Style">
+                <div class="bento-caption">
+                    <h4>Art Style</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">VISUAL</span>
+                        <span class="bento-tag">CEL SHADE</span>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <!-- Original Navigation -->
+        <!-- ======================== -->
+        <!--       ELEMENTS           -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">องค์ประกอบของเกม (Element)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-3">
+                <h3>ระบบต่างๆ ที่ทำงานร่วมกัน</h3>
+                <p>เกมประกอบด้วยระบบต่างๆ ที่ทำงานร่วมกันเพื่อสร้างประสบการณ์การเล่นที่สมบูรณ์</p>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       CHARACTERS         -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">ตัวละคร (Character)</h2>
+
+        <!-- Main Character -->
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/Main_Chracter.png" alt="Main Character" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Main Character</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">PROTAGONIST</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/Attack_combo.png" alt="Attack Combo" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Attack Combo</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">COMBAT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/Lock.png" alt="Lock System" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Lock System</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">SYSTEM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/Dash.png" alt="Dash Mechanic" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Dash</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">MECHANIC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-2 h-300">
+                <img src="Img/skill_system.png" alt="Skill System" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Skill System</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">SYSTEM</span>
+                        <span class="bento-tag">ABILITY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ShotGun Character -->
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/shootgun_chracter.webp" alt="Shotgun Character" loading="lazy">
+                <div class="bento-caption">
+                    <h4>ShotGun Character</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">ENEMY</span>
+                        <span class="bento-tag">CLOSE RANGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/BT_shotgun.webp" alt="Shotgun Behavior Tree" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Behavior Tree</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--video span-1">
+                <span class="video-badge">VIDEO</span>
+                <div class="video-16x9">
+                    <iframe src="https://www.youtube.com/embed/3bHGQWfTT7g?si=O_0wZ6AX8LdTvAMM"
+                        title="Shotgun Character Demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SMG Character -->
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/SMG_Chracter.webp" alt="SMG Character" loading="lazy">
+                <div class="bento-caption">
+                    <h4>SMG Character</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">ENEMY</span>
+                        <span class="bento-tag">MID RANGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/BT_SMG.webp" alt="SMG Behavior Tree" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Behavior Tree</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--video span-1">
+                <span class="video-badge">VIDEO</span>
+                <div class="video-16x9">
+                    <iframe src="https://www.youtube.com/embed/3gtBfLWnySM?si=8U3lAloPhvGnywwe"
+                        title="SMG Character Demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- HeavyMachineGun Character -->
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/Machinegun_Chracter.webp" alt="Machine Gun Character" loading="lazy">
+                <div class="bento-caption">
+                    <h4>HeavyMachineGun Character</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">ENEMY</span>
+                        <span class="bento-tag">LONG RANGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/BT_ MachineGun.webp" alt="Machine Gun Behavior Tree" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Behavior Tree</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--video span-1">
+                <span class="video-badge">VIDEO</span>
+                <div class="video-16x9">
+                    <iframe src="https://www.youtube.com/embed/fjH4kpsdTn8?si=QuWR-gwg9rflOeGY"
+                        title="Machine Gun Character Demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Boss -->
+        <div class="bento op-fade-in" style="margin-bottom:12px;">
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/TheBoss_Chracter.webp" alt="Boss Character" loading="lazy">
+                <div class="bento-caption">
+                    <h4>The B.o.s.s</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag bento-tag--accent">BOSS</span>
+                        <span class="bento-tag">ENEMY</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--img span-1 h-300">
+                <img src="Img/BT_ TheBoss.webp" alt="Boss Behavior Tree" loading="lazy">
+                <div class="bento-caption">
+                    <h4>Behavior Tree</h4>
+                    <div class="bento-tags">
+                        <span class="bento-tag">AI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card bento-card--video span-1">
+                <span class="video-badge">VIDEO</span>
+                <div class="video-16x9">
+                    <iframe src="https://www.youtube.com/embed/5DApemon3YA?si=-49A2-bUDNenkG6e"
+                        title="Boss Character Demo"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--     VIDEO WALKTHROUGH    -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">Video Walkthrough</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--video span-3">
+                <span class="video-badge">VIDEO</span>
+                <div class="video-16x9">
+                    <iframe src="https://www.youtube.com/embed/F9RtOhOvI0Q?si=Z5Cxgc4GiOHB4ySB" title="Game Walkthrough"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== Nav ===== -->
     <nav class="glass-nav">
         <ul class="nav-links">
-            <li>
-                <a href="home.html" class="nav-item">
-                    <span class="text">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="project.html" class="nav-item active">
-                    <span class="text">Project</span>
-                </a>
-            </li>
-            <li>
-                <a href="about.html" class="nav-item">
-                    <span class="text">About</span>
-                </a>
-            </li>
+            <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+            <li><a href="project.html" class="nav-item active"><span class="text">Project</span></a></li>
+            <li><a href="about.html" class="nav-item"><span class="text">About</span></a></li>
         </ul>
     </nav>
 
+    <!-- ===== Footer ===== -->
     <footer class="footer-nav">
         <div class="footer-content">
             <a href="project.html" class="footer-item">Go Back</a>
@@ -220,16 +359,21 @@
         </div>
     </footer>
 
-    <script src="newdawn-scroll.js"></script>
     <script>
         const glassCursor = document.querySelector('.glass-cursor');
-        
-        if (glassCursor) {
-            window.addEventListener('mousemove', (e) => {
-                glassCursor.style.left = e.clientX + 'px';
-                glassCursor.style.top = e.clientY + 'px';
+        window.addEventListener('mousemove', (e) => {
+            glassCursor.style.left = e.clientX + 'px';
+            glassCursor.style.top = e.clientY + 'px';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
     </script>
+    <script src="lightbox.js"></script>
 </body>
+
 </html>

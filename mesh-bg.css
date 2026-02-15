@@ -1,0 +1,98 @@
+/* ===== Ambient Gradient Mesh Background ===== */
+/* Shared across all pages — adds modern animated orbs over #D6D6D0 */
+
+.mesh-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background: #D6D6D0;
+}
+
+.mesh-bg .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+}
+
+/* Soft lavender — top right */
+.mesh-bg .orb--1 {
+    width: 60vw;
+    height: 60vw;
+    top: -15%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(180, 170, 220, 0.5) 0%, transparent 70%);
+    animation: orb-float-1 20s ease-in-out infinite alternate;
+}
+
+/* Warm peach — left center */
+.mesh-bg .orb--2 {
+    width: 50vw;
+    height: 50vw;
+    top: 30%;
+    left: -15%;
+    background: radial-gradient(circle, rgba(230, 195, 175, 0.45) 0%, transparent 70%);
+    animation: orb-float-2 25s ease-in-out infinite alternate;
+}
+
+/* Cool blue — bottom right */
+.mesh-bg .orb--3 {
+    width: 55vw;
+    height: 55vw;
+    bottom: -10%;
+    right: -5%;
+    background: radial-gradient(circle, rgba(170, 190, 220, 0.4) 0%, transparent 70%);
+    animation: orb-float-3 22s ease-in-out infinite alternate;
+}
+
+/* Subtle rose — center */
+.mesh-bg .orb--4 {
+    width: 35vw;
+    height: 35vw;
+    top: 55%;
+    left: 30%;
+    background: radial-gradient(circle, rgba(218, 89, 89, 0.08) 0%, transparent 70%);
+    animation: orb-float-4 18s ease-in-out infinite alternate;
+}
+
+@keyframes orb-float-1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-40px, 30px) scale(1.08);
+    }
+}
+
+@keyframes orb-float-2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, -20px) scale(1.05);
+    }
+}
+
+@keyframes orb-float-3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-20px, -30px) scale(1.1);
+    }
+}
+
+@keyframes orb-float-4 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(20px, 20px) scale(1.06);
+    }
+}

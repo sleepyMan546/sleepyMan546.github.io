@@ -1,176 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MISSTURER</title>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="misstrer.css">
- 
-     <style>
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; 
-            
-        }
-     
-     </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MISSTURER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="mesh-bg.css">
+  <link rel="stylesheet" href="op-layout.css">
+  <link rel="stylesheet" href="lightbox.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #D6D6D0;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+  </style>
 </head>
+
 <body>
   <div class="glass-cursor"></div>
-   <div><img src="Img/MissturerUI_Banner.webp"  alt="loading"  class="Operation_img"></div>
+  <div class="mesh-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="orb orb--4"></div>
+  </div>
 
- 
- <div class="Operation"> 
-    <div class="Explain" style="grid-area: box-1;">
-      <h2 class="main-title">ภาพรวม (Overview)</h2>
-      <div class="Line"></div>
-      <p class="paragraph">
-       การออกแบบUI/UXของเกม: Missturerที่ผมวางแผนโดยเน้นไปที่ความสะดวกในการใช้งาน UI การใช้สีที่มีContrastชัดเจน<br>
-       Project นี้ผมได้ออกแบบทุกอย่าง Art Style,UI/UX , Graphic Design <br>
-       </p>
-      <div class="project-info-container">
-    <div class="info-row">
-        <div class="info-label">ตำแหน่ง (Role)</div>
-        <div class="info-value">UI/UX Designer</div>
-    </div>
- 
-    <div class="info-row">
-        <div class="info-label">ซอฟต์แวร์ (Software)</div>
-        <div class="info-value">Figma / Photoshop /  </div>
-    </div>
-     <div class="info-row">
-        <div class="info-label"> สมาชิกทีม (Team Size)</div>
-        <div class="info-value"> 1 คน</div>
-    </div>
+  <!-- ===== Hero ===== -->
+  <div class="op-hero">
+    <img src="Img/MissturerUI_Banner.webp" alt="MISSTURER">
+    <div class="op-hero-title">
+      <h1>MISSTURER</h1>
     </div>
   </div>
-     <div class="Explain" style="grid-area: box-2;"> </div>
-      <div class="Explain" style="grid-area: box-3;"><h2 class="main-title">ขั้นตอนการพัฒนา (Development stages)</h2>
-      <div class="Line"></div></div>
-      <div class="Explain" style="grid-area: box-4;"><div class="bento-grid1">
 
-   
-        <div class="card">
-            <div class="card-image"><img src="Img/Wireframe.webp" loading="lazy"alt="Artwork"></div>
-            <div class="card-content">
-                <h2 class="card-title">Wireframe</h2>
-                <div class="card-description">เริ่มจากการวางแผนโครงสร้างของเกมว่าควรมีหน้าอะไรบ้างและทำงานเชื่อมต่อกันอย่างไร <br>หลังจากนั้นจึงจัดLayout อย่างง่ายโดยใช้หลักการVisual Hierarchy เพื่อจัดวางองค์ประกอบต่างๆและใช้ 4Grid System ในการทำระยะห่างระหว่างUI</div>
-            </div>
+  <!-- ===== Page ===== -->
+  <div class="op-page">
+
+    <!-- ======================== -->
+    <!--        OVERVIEW          -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ภาพรวม (Overview)</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--text span-2">
+        <h3>การออกแบบ UI/UX ของเกม Missturer</h3>
+        <p>
+          การออกแบบ UI/UX ของเกม Missturer ที่ผมวางแผนโดยเน้นไปที่ความสะดวกในการใช้งาน UI การใช้สีที่มี Contrast ชัดเจน
+          Project นี้ผมได้ออกแบบทุกอย่าง Art Style, UI/UX, Graphic Design
+        </p>
+      </div>
+      <div class="bento-card bento-card--text span-1">
+        <div class="op-info-table">
+          <div class="op-info-row">
+            <span class="op-info-label">Role</span>
+            <span class="op-info-value">UI/UX Designer</span>
+          </div>
+          <div class="op-info-row">
+            <span class="op-info-label">Software</span>
+            <span class="op-info-value">Figma / Photoshop</span>
+          </div>
+          <div class="op-info-row">
+            <span class="op-info-label">Team Size</span>
+            <span class="op-info-value">1 คน</span>
+          </div>
         </div>
-    
+      </div>
+    </div>
 
-    
-        <div class="card">
-            <div class="card-image"><img src="Img/User_Flow.webp" loading="lazy" alt="Artwork"></div>
-            <div class="card-content">
-                <h2 class="card-title">User Flow</h2>
-                <p class="card-description">ออกแบบUser Flow : เพื่อจำลองประสบการณ์ผู้เล่นในเกมว่าจะพบเจออะไรบ้าง เราจะออกแบบประสบการณ์เพื่อให้ผู้เล่นสามารถเข้าใจและเล่นเกมได้อย่างง่ายดาย<br>หลังจากออกแบบUser Flow แล้วจึงออกแบบ UI ให้เหมาะสมกับภาพและFlowที่เราวางแผนเพื่อสร้างประสบการณ์ที่ดี</p>
-            </div>
+    <!-- ======================== -->
+    <!--   DEVELOPMENT STAGES     -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ขั้นตอนการพัฒนา (Development Stages)</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/Wireframe.webp" loading="lazy" alt="Wireframe">
+        <div class="bento-caption">
+          <h4>Wireframe</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">UX</span>
+            <span class="bento-tag">PLANNING</span>
+          </div>
         </div>
+      </div>
+      <div class="bento-card bento-card--text span-2">
+        <h3>Wireframe</h3>
+        <p>
+          เริ่มจากการวางแผนโครงสร้างของเกมว่าควรมีหน้าอะไรบ้างและทำงานเชื่อมต่อกันอย่างไร
+          หลังจากนั้นจึงจัด Layout อย่างง่ายโดยใช้หลักการ Visual Hierarchy
+          เพื่อจัดวางองค์ประกอบต่างๆ และใช้ 4-Grid System ในการทำระยะห่างระหว่าง UI
+        </p>
+      </div>
+    </div>
 
-        <div class="card">
-            <div class="card-image"><img src="Img/system_Design_Missturer.webp" loading="lazy" alt="Artwork"></div>
-            <div class="card-content">
-                <h2 class="card-title">Design System</h2>
-                <p class="card-description">คือการสร้างระบบที่ทำให้งานออกแบบมีทิศทางเดียวกันหรือเป็นแนวทางที่ใช้ในการออกแบบ UI ที่มีรูปแบบสอดคล้องกัน<br>ไอเดียในการออกแบบของผมคือ ความเรียบง่ายของ UI,Font สีที่มีContrastสูง เช่น สีขาว สีดำและสีเขียวเพื่อให้ผู้เล่นสามารถเข้าใจและเล่นเกมได้อย่างสนุก</p>
-            </div>
+    <div class="bento op-fade-in" style="margin-top:12px;">
+      <div class="bento-card bento-card--text span-2">
+        <h3>User Flow</h3>
+        <p>
+          ออกแบบ User Flow เพื่อจำลองประสบการณ์ผู้เล่นในเกมว่าจะพบเจออะไรบ้าง
+          เราจะออกแบบประสบการณ์เพื่อให้ผู้เล่นสามารถเข้าใจและเล่นเกมได้อย่างง่ายดาย
+          หลังจากออกแบบ User Flow แล้วจึงออกแบบ UI ให้เหมาะสมกับภาพและ Flow ที่เราวางแผนเพื่อสร้างประสบการณ์ที่ดี
+        </p>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/User_Flow.webp" loading="lazy" alt="User Flow">
+        <div class="bento-caption">
+          <h4>User Flow</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">UX</span>
+            <span class="bento-tag">FLOW</span>
+          </div>
         </div>
+      </div>
+    </div>
 
-  </div></div>
-    
-      <div class="Explain" style="grid-area: box-5;"><h2 class="main-title"> การออกแบบUI (UI Design)</h2>
-      <div class="Line"></div></div>
-    </div></div>
-
-      <div class="Explain" style="grid-area: box-8;">
-        
-       
-    
-     <div class="page"> 
-        <h3 > Title Screen </h3>
-         <img src="Img/PAGE01_Main.webp" alt="" loading="lazy">
-
-         <h3 > Load Save Screen </h3>
-         <img src="Img/PAGE_02_Load save.webp" alt="" loading="lazy">
-
-            <h3 > Character Select Screen </h3>
-         <img src="Img/Page_03_Chracter_select.webp" alt="" loading="lazy">
-
-                 <h3 > Game Play Screen </h3>
-         <img src="Img/PAGE_04_GamePlay.webp" alt="" loading="lazy">
-
-                <h3 > Inventory Screen </h3>
-         <img src="Img/PAGE_05_Inventory.webp" alt="" loading="lazy">
-
-                          <h3 > Pause Screen </h3>
-         <img src="Img/PAGE_06_Pause.webp" alt="" loading="lazy">
-
-                          <h3 > Game-Over Screen </h3>
-         <img src="Img/PAGE_07_Game_Over.webp" alt="" loading="lazy">
-
-                          <h3 > Setting Screen </h3>
-         <img src="Img/PAGE_08_Setting.webp" alt="" loading="lazy">
-
-                               <h3 > Map Screen </h3>
-         <img src="Img/PAGE_9_MAP.webp" alt="" loading="lazy">
-
-         
-         
-         
-        
-        
-        
-        
+    <div class="bento op-fade-in" style="margin-top:12px;">
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/system_Design_Missturer.webp" loading="lazy" alt="Design System">
+        <div class="bento-caption">
+          <h4>Design System</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">UI</span>
+            <span class="bento-tag">SYSTEM</span>
+          </div>
         </div>
-        
-        
+      </div>
+      <div class="bento-card bento-card--text span-2">
+        <h3>Design System</h3>
+        <p>
+          คือการสร้างระบบที่ทำให้งานออกแบบมีทิศทางเดียวกัน หรือเป็นแนวทางที่ใช้ในการออกแบบ UI ที่มีรูปแบบสอดคล้องกัน
+          ไอเดียในการออกแบบของผมคือความเรียบง่ายของ UI, Font, สีที่มี Contrast สูง เช่น สีขาว สีดำ และสีเขียว
+          เพื่อให้ผู้เล่นสามารถเข้าใจและเล่นเกมได้อย่างสนุก
+        </p>
+      </div>
+    </div>
 
+    <!-- ======================== -->
+    <!--       UI DESIGN          -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">การออกแบบ UI (UI Design)</h2>
 
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE01_Main.webp" alt="Title Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Title Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_02_Load save.webp" alt="Load Save Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Load Save Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/Page_03_Chracter_select.webp" alt="Character Select" loading="lazy">
+        <div class="bento-caption">
+          <h4>Character Select</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+    </div>
 
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_04_GamePlay.webp" alt="Game Play Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Game Play Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_05_Inventory.webp" alt="Inventory Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Inventory Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_06_Pause.webp" alt="Pause Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Pause Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+    </div>
 
-   
-      
-<nav class="glass-nav">
-  <ul class="nav-links">
-    <li>
-      <a href="home.html" class="nav-item">
-       
-        <span class="text">Home</span>
-      </a>
-    </li>
-    <li>
-      <a href="project.html" class="nav-item active">
-        
-        <span class="text">Project</span>
-      </a>
-    </li>
-    <li>
-      <a href="about.html" class="nav-item">
-       
-        <span class="text">About</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_07_Game_Over.webp" alt="Game-Over Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Game-Over Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_08_Setting.webp" alt="Setting Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Setting Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/PAGE_9_MAP.webp" alt="Map Screen" loading="lazy">
+        <div class="bento-caption">
+          <h4>Map Screen</h4>
+          <div class="bento-tags"><span class="bento-tag bento-tag--accent">UI</span></div>
+        </div>
+      </div>
+    </div>
 
-<footer class="footer-nav">
-  <div class="footer-content">
-    <a href="project.html" class="footer-item">  Go Back</a>
-    
-    <a href="video.html" class="footer-item">Next Project </a>
   </div>
-</footer>
 
-<script>
-  const glassCursor = document.querySelector('.glass-cursor');
+  <!-- ===== Nav ===== -->
+  <nav class="glass-nav">
+    <ul class="nav-links">
+      <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+      <li><a href="project.html" class="nav-item active"><span class="text">Project</span></a></li>
+      <li><a href="about.html" class="nav-item"><span class="text">About</span></a></li>
+    </ul>
+  </nav>
 
-  window.addEventListener('mousemove', (e) => {
-    glassCursor.style.left = e.clientX + 'px';
-    glassCursor.style.top = e.clientY + 'px';
-  });
-</script>
+  <!-- ===== Footer ===== -->
+  <footer class="footer-nav">
+    <div class="footer-content">
+      <a href="project.html" class="footer-item">Go Back</a>
+      <a href="video.html" class="footer-item">Next Project</a>
+    </div>
+  </footer>
 
+  <script>
+    const glassCursor = document.querySelector('.glass-cursor');
+    window.addEventListener('mousemove', (e) => {
+      glassCursor.style.left = e.clientX + 'px';
+      glassCursor.style.top = e.clientY + 'px';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
+  </script>
+  <script src="lightbox.js"></script>
 </body>
+
 </html>

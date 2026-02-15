@@ -464,7 +464,10 @@ html {
 }
 
 .download_text {
-  font-size: 6rem;
+  font-size: 2em;
+  margin: 24px;
+  text-align: center;
+  text-decoration: none;
   position: relative;
   font-family: 'Poppins', sans-serif;
   color: rgb(255, 255, 255);
@@ -730,6 +733,7 @@ html {
   width: 100%;
   height: 100%;
   margin-bottom: 24px;
+  z-index: 30;
 }
 
 .main-title {

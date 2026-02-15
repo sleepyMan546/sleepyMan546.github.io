@@ -1,0 +1,463 @@
+/* ============================================================
+   op-layout.css — Shared project-page layout & glassmorphism
+   Used by: operation, newdawn, abyssal, missturer, graphic, video
+   ============================================================ */
+
+/* ===== Page wrapper ===== */
+.op-page {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 24px;
+}
+
+/* ===== Hero ===== */
+.op-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.op-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.op-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(214, 214, 208, 0) 70%, rgba(247, 94, 107, 0.9) 100%);
+}
+
+.op-hero-title {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.op-hero-title h1 {
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* ===== Section Title ===== */
+.op-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    margin-top: 48px;
+    padding-left: 4px;
+}
+
+.op-section-title::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #da5959;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(218, 89, 89, 0.25), 0 0 14px rgba(218, 89, 89, 0.5);
+    flex-shrink: 0;
+    animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* ===== Bento Grid — 3 cols ===== */
+.bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* ===== Bento Card — Glassmorphism ===== */
+.bento-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    position: relative;
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Image card — no fixed height, card wraps to fit image */
+.bento-card--img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+}
+
+.bento-card--img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Remove min-height from image cards so they fit the image naturally */
+.bento-card--img.h-300,
+.bento-card--img.h-350,
+.bento-card--img.h-400 {
+    min-height: unset;
+}
+
+/* Video card (YouTube) */
+.bento-card--video .video-16x9 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.bento-card--video .video-16x9 iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Inline autoplay video */
+.bento-card--inline-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text card — glass shine */
+.bento-card--text {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.bento-card--text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+    pointer-events: none;
+    border-radius: 16px 16px 0 0;
+}
+
+.bento-card--text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.bento-card--text p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #555;
+}
+
+/* ===== Caption overlay ===== */
+.bento-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.bento-caption h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.bento-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.bento-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.bento-tag--accent {
+    background: rgba(218, 89, 89, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Video badge — frosted glass */
+.video-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(218, 89, 89, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(218, 89, 89, 0.3);
+}
+
+/* ===== Info Table ===== */
+.op-info-table {
+    width: 100%;
+}
+
+.op-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.25s ease;
+}
+
+.op-info-row:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.op-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.op-info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.op-info-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-align: right;
+}
+
+/* ===== Span helpers ===== */
+.span-1 {
+    grid-column: span 1;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+/* ===== Card height helpers ===== */
+.h-300 {
+    min-height: 300px;
+}
+
+.h-350 {
+    min-height: 350px;
+}
+
+.h-400 {
+    min-height: 400px;
+}
+
+/* ===== Download CTA ===== */
+.op-download-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.op-download-wrapper img {
+    width: 100%;
+    display: block;
+    opacity: 0.45;
+    transition: opacity 0.4s ease;
+}
+
+.op-download-wrapper:hover img {
+    opacity: 0.65;
+}
+
+.op-download-btn {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px 64px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    color: #1a1a1a;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    display: inline-block;
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.op-download-btn:hover {
+    background: rgba(218, 89, 89, 0.8);
+    border-color: rgba(218, 89, 89, 0.6);
+    color: #fff;
+    box-shadow: 0 8px 40px rgba(218, 89, 89, 0.3);
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* ===== Fade In ===== */
+.op-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.op-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1180px) {
+    .op-hero {
+        height: 100vh;
+        min-height: 280px;
+    }
+
+    .op-hero img {
+        object-position: top center;
+    }
+
+    .op-page {
+        padding: 0 12px;
+    }
+
+    .bento {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .span-1,
+    .span-2,
+    .span-3 {
+        grid-column: span 1;
+    }
+
+    .h-300,
+    .h-350,
+    .h-400 {
+        min-height: 200px;
+    }
+
+    .bento-card--text {
+        padding: 20px;
+    }
+
+    .bento-card--text h3 {
+        font-size: 20px;
+    }
+
+    .bento-card--text p {
+        font-size: 15px;
+    }
+
+    .op-section-title {
+        font-size: 24px;
+        margin-top: 32px;
+    }
+
+    .op-download-btn {
+        font-size: 16px;
+        padding: 12px 36px;
+        bottom: 16px;
+    }
+
+    .op-info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .op-info-value {
+        text-align: left;
+    }
+}

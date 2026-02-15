@@ -1,150 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanapol Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="test.css">
-    
-     <style>
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; 
-            
-        }
-     
-     </style>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanapol Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="mesh-bg.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+  </style>
+
 </head>
-  
-<body >
-  
-   <canvas id="paintCanvas"></canvas>
-   <div class="glass-cursor"></div>
-  <div class = "loader">
+
+<body>
+
+  <canvas id="paintCanvas"></canvas>
+  <div class="glass-cursor"></div>
+  <div class="mesh-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="orb orb--4"></div>
+  </div>
+  <div class="loader">
     <div class="counter">
-    <h2 class="number">11 <span>%</span></h2>
-    <div class="progress"> 
+      <h2 class="number">11 <span>%</span></h2>
+      <div class="progress">
         <div class="percentBar"></div>
+      </div>
     </div>
   </div>
-</div>
-  <header class="topbar"> <div><h1 class="Project">HOME</h1></div> </header>
-   <div class="Internship"> <h2 class="main-title">ตำแหน่งฝึกงานที่สนใจ (Internship Seeker)</h2>
-      <div class="Line"></div>
-      <p class="paragraph">
-        ตำแหน่งหลัก : Artist Marketing <br>
-ตำแหน่งรอง : Graphic Design | UX/UI Design | Game Developer <br> ผมกำลังมองหาที่ฝึกงานเพื่อพัฒนาทักษะด้านการออกแบบและนำเสนอแนวคิดใหม่ๆเกี่ยวกับเกม</p>
-<h1 class="Projects">คลิกซ้ายวาดภาพในหน้านี้</h1>
+  <header class="topbar">
+    <div>
+      <h1 class="Project">HOME</h1>
+    </div>
+  </header>
+  <div class="Internship">
+    <h2 class="main-title">ตำแหน่งฝึกงานที่สนใจ (Internship Seeker)</h2>
+    <div class="Line"></div>
+    <p class="paragraph">
+      ตำแหน่งหลัก : Artist Marketing <br>
+      ตำแหน่งรอง : Graphic Design | UX/UI Design | Game Developer <br>
+      ผมกำลังมองหาที่ฝึกงานเพื่อพัฒนาทักษะด้านการออกแบบและนำเสนอแนวคิดใหม่ๆเกี่ยวกับเกม</p>
+    <h1 class="Projects">คลิกซ้ายวาดภาพในหน้านี้</h1>
 
-<button onclick="ctx.clearRect(0, 0, canvas.width, canvas.height)" class="clear"><h3>Clear</h3></button>
-   
-    
-</div>
+    <button onclick="ctx.clearRect(0, 0, canvas.width, canvas.height)" class="clear">
+      <h3>Clear</h3>
+    </button>
 
- 
- 
-   
 
- 
-     <nav class="glass-nav">
-  <ul class="nav-links">
-    <li>
-      <a href="home.html" class="nav-item active">
-       
-        <span class="text">Home</span>
-      </a>
-    </li>
-    <li>
-      <a href="project.html" class="nav-item">
-        
-        <span class="text">Project</span>
-      </a>
-    </li>
-    <li>
-      <a href="about.html" class="nav-item">
-       
-        <span class="text">About</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-   
+  </div>
+
+
+
+
+
+
+  <nav class="glass-nav">
+    <ul class="nav-links">
+      <li>
+        <a href="home.html" class="nav-item active">
+
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="project.html" class="nav-item">
+
+          <span class="text">Project</span>
+        </a>
+      </li>
+      <li>
+        <a href="about.html" class="nav-item">
+
+          <span class="text">About</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
   <script>
-   let i = 0;
-   let number = document.querySelector('.number');
-   let percentBar = document.querySelector('.percentBar');
-   let loader = document.querySelector('.loader');
-   let interval = setInterval(function()  {
-    number.innerHTML = i+'<span>%</span>';
-    percentBar.style.width = i+'%';
-    i++;
-    if(i == 101){
+    let i = 0;
+    let number = document.querySelector('.number');
+    let percentBar = document.querySelector('.percentBar');
+    let loader = document.querySelector('.loader');
+    let interval = setInterval(function () {
+      number.innerHTML = i + '<span>%</span>';
+      percentBar.style.width = i + '%';
+      i++;
+      if (i == 101) {
         clearInterval(interval);
-        setTimeout(function(){
-                 loader.style.visibility = 'hidden';
-        loader.style.pointerEvents = 'none';
-        },1000);
+        setTimeout(function () {
+          loader.style.visibility = 'hidden';
+          loader.style.pointerEvents = 'none';
+        }, 1000);
+      }
+
+    }, 30)
+
+  </script>
+
+  <script>
+    const canvas = document.getElementById('paintCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
-    
-   },30)
- 
-  </script> 
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
- <script>
-const canvas = document.getElementById('paintCanvas');
-const ctx = canvas.getContext('2d');
+    let painting = false;
+    let pixelSize = 24;
+    let hue = 0;
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-let painting = false;
-let pixelSize = 24;   
-let hue = 0;
-
-function getPos(e) {
-  const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  
-  
-  const snapX = Math.floor(x / pixelSize) * pixelSize;
-  const snapY = Math.floor(y / pixelSize) * pixelSize;
-  return { x: snapX, y: snapY };
-}
-
-function startPosition(e) {
-  painting = true;
-  draw(e); 
-}
-
-function finishedPosition() {
-  painting = false;
-}
-
-const colors = [ '#da5959'];
-
-function draw(e) {
-  if (!painting) return;
-
-  const pos = getPos(e);
-  const randomIndex = Math.floor(Math.random() * colors.length); 
-  ctx.fillStyle = colors[randomIndex];
-  ctx.fillRect(pos.x, pos.y, pixelSize, pixelSize);
-}
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
 
-canvas.addEventListener('mousedown', startPosition);
-canvas.addEventListener('mouseup', finishedPosition);
-canvas.addEventListener('mouseleave', finishedPosition);
-canvas.addEventListener('mousemove', draw);
-</script>
+      const snapX = Math.floor(x / pixelSize) * pixelSize;
+      const snapY = Math.floor(y / pixelSize) * pixelSize;
+      return { x: snapX, y: snapY };
+    }
+
+    function startPosition(e) {
+      painting = true;
+      draw(e);
+    }
+
+    function finishedPosition() {
+      painting = false;
+    }
+
+    const colors = ['#da5959'];
+
+    function draw(e) {
+      if (!painting) return;
+
+      const pos = getPos(e);
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      ctx.fillStyle = colors[randomIndex];
+      ctx.fillRect(pos.x, pos.y, pixelSize, pixelSize);
+    }
+
+
+    canvas.addEventListener('mousedown', startPosition);
+    canvas.addEventListener('mouseup', finishedPosition);
+    canvas.addEventListener('mouseleave', finishedPosition);
+    canvas.addEventListener('mousemove', draw);
+  </script>
 
 
 

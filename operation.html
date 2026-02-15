@@ -1,140 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operation Eclipse</title>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="test.css">
-   <link rel="preload" as="image" href="Img/op.webp">
-     <style>
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; 
-            
-        }
-     
-     </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operation Eclipse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="mesh-bg.css">
+  <link rel="stylesheet" href="op-layout.css">
+  <link rel="stylesheet" href="lightbox.css">
+  <link rel="preload" as="image" href="Img/op.webp">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #D6D6D0;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+
+    /* Page-specific: hero gradient color override */
+    .op-hero::after {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 65%, rgba(55, 213, 241, 0.85) 100%);
+    }
+
+    /* Character banner images — wide panoramic, keep cover */
+    .bento-card--img.char-card img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% center;
+    }
+  </style>
 </head>
+
 <body>
-<!--   
-  <header class="topbar-operation"> OPERATION ECLISPSE </header> -->
-  <div><img src="Img/op.webp"   class="Operation_img"></div>
   <div class="glass-cursor"></div>
- <div class="Operation"> 
- 
-    <div class="Explain" style="grid-area: box-1;">
-      <h2 class="main-title">ภาพรวม (Overview)</h2>
-      <div class="Line"></div>
-      <p class="paragraph">
-        ผู้เล่นได้รับบทบาทเป็นร่างโคลนที่หลุดออกจากแคปซูลภายในองค์กรEclipse คุณต้องหาความจริงเกี่ยวกับตนเองและองค์กรEclipse
-        เกมนี้ผู้เล่นจำเป็นต้องใช้อาวุธที่หลากหลายในการต่อสู้ ทำให้เกิดคอมโบสุดเท่ รวดเร็วและลื่นไหล</p>
-      <div class="project-info-container">
-    <div class="info-row">
-        <div class="info-label">หมวดหมู่เกม (Genre)</div>
-        <div class="info-value">2D Platformer Shooter</div>
-    </div>
-    <div class="info-row">
-        <div class="info-label">ตำแหน่ง (Role)</div>
-        <div class="info-value"> Programmer / Graphic Design</div>
-    </div>
-    <div class="info-row">
-        <div class="info-label">ซอฟต์แวร์ (Software)</div>
-        <div class="info-value">Unity / Figma / Capcut / AfterEffect / Github / Docs / VsCode</div>
-    </div>
-     <div class="info-row">
-        <div class="info-label"> สมาชิกทีม (Team Size)</div>
-        <div class="info-value"> 3 คน</div>
-    </div>
+
+  <div class="mesh-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="orb orb--4"></div>
+  </div>
+
+  <!-- ===== Hero ===== -->
+  <div class="op-hero">
+    <img src="Img/op.webp" alt="Operation Eclipse">
+    <div class="op-hero-title">
+      <h1>Operation Eclipse</h1>
     </div>
   </div>
-     <div class="Explain" style="grid-area: box-2;"> </div>
-      <div class="Explain" style="grid-area: box-3;"><h2 class="main-title">ฟีเจอร์สำคัญ (Key Features)</h2>
-      <div class="Line"></div></div>
-      <div class="Explain" style="grid-area: box-4;"><img src="Img/key.png"  loading="lazy"alt="" class="Operation_img"></div>
-      <div class="Explain" style="grid-area: box-5;"><img src="Img/Operation.png" alt="" class="Operation_img"></div>
-      <div class="Explain" style="grid-area: box-6;"><div class="box-6div"><h3 class="Explain_Title">ระบบต่อสู้ที่รวดเร็วและแปลกใหม่ </h3><p class="paragraph">ผู้เล่นสามารถเลือกอาวุธในการต่อสู้เพื่อได้รับสกิลพิเศษในการต่อสู้ เช่น Dash , Double Jump ,Barrier<br>
-      ทำให้เกิดการสลับอาวุธเพื่อใช้ความสามารถพิเศษของตัวละครและถ้าผู้เล่นสามารถทำคอมโบได้ ตัวละครของคุณจะได้บัฟพิเศษแบบสุ่มมากมาย
-      </p></div></div>
-      <div class="Explain" style="grid-area: box-7;"><video width="100%" class="Operation_video" autoplay muted loop>
-        <source src="video/CUT_SCENE.mp4" type="video/mp4" ></video></div>
-       <div class="Explain" style="grid-area: box-8;"><div class="box-6div"><h3 class="Explain_Title">การเล่าเรื่องผ่านฉากในเกม</h3><p class="paragraph">ด่านในเกมถูกออกแบบเพื่อให้ผู้เล่นได้เดินทางสำรวจ องค์กร "Eclipse" ที่เต็มไปด้วยความปริศนา<br>
- เราได้ใช้หลักการออกแบบLevel Design เพื่อให้ผู้เล่นสามารถดื่มด่ำกับGameplayและเนื้อเรื่องได้อย่างสมบูรณ์
-      </p></div></div>
-   <div class="Explain" style="grid-area: box-9;"><h2 class="main-title">ตัวละคร (Character)</h2>
-      <div class="Line"></div></div>
-       <div class="Explain" style="grid-area: box-10;"></div>
-        <div class="Explain" style="grid-area: box-11;"><img src="Img/Number18_Banner.png" alt="" class="Operation_img">
+
+  <!-- ===== Page ===== -->
+  <div class="op-page">
+
+    <!-- ======================== -->
+    <!--        OVERVIEW          -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ภาพรวม (Overview)</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--text span-2">
+        <h3>เรื่องราวของร่างโคลนที่ตื่นขึ้นมาในองค์กรลับ</h3>
+        <p>
+          ผู้เล่นได้รับบทบาทเป็นร่างโคลนที่หลุดออกจากแคปซูลภายในองค์กร Eclipse
+          คุณต้องหาความจริงเกี่ยวกับตนเองและองค์กร Eclipse
+          เกมนี้ผู้เล่นจำเป็นต้องใช้อาวุธที่หลากหลายในการต่อสู้ ทำให้เกิดคอมโบสุดเท่ รวดเร็วและลื่นไหล
+        </p>
       </div>
-        <div class="Explain" style="grid-area: box-12;"><img src="Img/Weapon.png" alt="" class="Operation_img"></div>
-        <div class="Explain" style="grid-area: box-13;"><img src="Img/Number18_Showcase.png" alt="" class="Operation_img">  <iframe width="95%" height="600px" src="https://www.youtube.com/embed/zTP-BvS8obQ?si=ggqBwiSx7F3TDnMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="Explain" style="grid-area: box-14;"><img src="Img/THEBOSS_Banner.png" alt="" class="Operation_img"></div>
-        <div class="Explain" style="grid-area: box-15;"><img src="Img/THEBOSS_Showcase.png" alt="" class="Operation_img"><iframe width="95%" height="600px"src="https://www.youtube.com/embed/WgNNU0fMTvQ?si=g69gDtTmJdM7Jf9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="Explain" style="grid-area: box-16;"><img src="Img/THEMECHA_Banner.png" alt="" class="Operation_img"></div>
-         <div class="Explain" style="grid-area: box-17;"><img src="Img/THEMECHA_Showcase.png" alt="" class="Operation_img"><iframe width="95%" height="600px" src="https://www.youtube.com/embed/MotptwOURbc?si=lg2mSKpTOlJPnwSe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          <div class="Explain" style="grid-area: box-18;"><img src="Img/THEEMPLOYEE_Banner.png" alt="" class="Operation_img"></div>
-           <div class="Explain" style="grid-area: box-19;"><img src="Img/THEEMPLOYEE_Showcase.png" alt="" class="Operation_img"><iframe width="95%" height="600px" src="https://www.youtube.com/embed/BfvTXCk9U_I?si=Y0HildCt0Fv8w2eN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="Explain" style="grid-area: box-20;">
-  <div class="wrapper">
-    <img src="Img/download.png" alt="" class="Operation_img"> 
-    <a href="https://drive.google.com/drive/folders/1DqF3wCopflB4ic5hGCe7TalcuXvWSTE_?usp=sharing" target="_blank" rel="noopener noreferrer">
-      <div class="download">
-        <h1 class="download_text">Download</h1>
+      <div class="bento-card bento-card--text span-1">
+        <div class="op-info-table">
+          <div class="op-info-row">
+            <span class="op-info-label">Genre</span>
+            <span class="op-info-value">2D Platformer Shooter</span>
+          </div>
+          <div class="op-info-row">
+            <span class="op-info-label">Role</span>
+            <span class="op-info-value">Programmer / Graphic Design</span>
+          </div>
+          <div class="op-info-row">
+            <span class="op-info-label">Software</span>
+            <span class="op-info-value">Unity / Figma / Capcut / AfterEffect</span>
+          </div>
+          <div class="op-info-row">
+            <span class="op-info-label">Team Size</span>
+            <span class="op-info-value">3 คน</span>
+          </div>
+        </div>
       </div>
-    </a>
+    </div>
+
+    <!-- ======================== -->
+    <!--      KEY FEATURES        -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ฟีเจอร์สำคัญ (Key Features)</h2>
+    <div class="bento op-fade-in">
+
+      <!-- Row 1: 3 equal cards -->
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/key.png" loading="lazy" alt="Key Features">
+        <div class="bento-caption">
+          <h4>Combat System</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">IN GAME</span>
+            <span class="bento-tag">COMBAT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card bento-card--img span-1 h-350">
+        <img src="Img/Operation.png" alt="Gameplay">
+        <div class="bento-caption">
+          <h4>Gameplay</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">IN GAME</span>
+            <span class="bento-tag">PLATFORMER</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card bento-card--inline-video span-1 h-350">
+        <video autoplay muted loop playsinline>
+          <source src="video/CUT_SCENE.mp4" type="video/mp4">
+        </video>
+        <span class="video-badge">VIDEO</span>
+        <div class="bento-caption">
+          <h4>Cutscene</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">IN GAME</span>
+            <span class="bento-tag">STORY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: text description cards -->
+      <div class="bento-card bento-card--text span-2">
+        <h3>ระบบต่อสู้ที่รวดเร็วและแปลกใหม่</h3>
+        <p>
+          ผู้เล่นสามารถเลือกอาวุธในการต่อสู้เพื่อได้รับสกิลพิเศษในการต่อสู้ เช่น Dash, Double Jump, Barrier
+          ทำให้เกิดการสลับอาวุธเพื่อใช้ความสามารถพิเศษของตัวละคร
+          และถ้าผู้เล่นสามารถทำคอมโบได้ ตัวละครของคุณจะได้บัฟพิเศษแบบสุ่มมากมาย
+        </p>
+      </div>
+
+      <div class="bento-card bento-card--text span-1">
+        <h3>การเล่าเรื่องผ่านฉากในเกม</h3>
+        <p>
+          ด่านในเกมถูกออกแบบเพื่อให้ผู้เล่นได้สำรวจองค์กร "Eclipse" ที่เต็มไปด้วยความปริศนา
+          เราได้ใช้หลักการ Level Design
+          เพื่อให้ผู้เล่นดื่มด่ำกับ Gameplay และเนื้อเรื่องอย่างสมบูรณ์
+        </p>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!--       CHARACTERS         -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ตัวละคร (Character)</h2>
+
+    <!-- Character 1 — Number 18 -->
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img char-card span-1 h-300">
+        <img src="Img/Number18_Banner.png" alt="Number 18">
+        <div class="bento-caption">
+          <h4>Number 18</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">PROTAGONIST</span>
+            <span class="bento-tag">CLONE</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--video span-2">
+        <span class="video-badge">VIDEO</span>
+        <div class="video-16x9">
+          <iframe src="https://www.youtube.com/embed/zTP-BvS8obQ?si=ggqBwiSx7F3TDnMU" title="Number 18 Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character 2 — The Boss -->
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img char-card span-1 h-300">
+        <img src="Img/THEBOSS_Banner.png" alt="The Boss">
+        <div class="bento-caption">
+          <h4>The Boss</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">BOSS</span>
+            <span class="bento-tag">ENEMY</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--video span-2">
+        <span class="video-badge">VIDEO</span>
+        <div class="video-16x9">
+          <iframe src="https://www.youtube.com/embed/WgNNU0fMTvQ?si=g69gDtTmJdM7Jf9y" title="The Boss Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character 3 — The Mecha -->
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img char-card span-1 h-300">
+        <img src="Img/THEMECHA_Banner.png" alt="The Mecha" style="object-position: 85% center;">
+        <div class="bento-caption">
+          <h4>The Mecha</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">BOSS</span>
+            <span class="bento-tag">MECH</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--video span-2">
+        <span class="video-badge">VIDEO</span>
+        <div class="video-16x9">
+          <iframe src="https://www.youtube.com/embed/MotptwOURbc?si=lg2mSKpTOlJPnwSe" title="The Mecha Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character 4 — The Employee -->
+    <div class="bento op-fade-in" style="margin-bottom:12px;">
+      <div class="bento-card bento-card--img char-card span-1 h-300">
+        <img src="Img/THEEMPLOYEE_Banner.png" alt="The Employee" style="object-position: 85% center;">
+        <div class="bento-caption">
+          <h4>The Employee</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">BOSS</span>
+            <span class="bento-tag">ENEMY</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card bento-card--video span-2">
+        <span class="video-badge">VIDEO</span>
+        <div class="video-16x9">
+          <iframe src="https://www.youtube.com/embed/BfvTXCk9U_I?si=Y0HildCt0Fv8w2eN" title="The Employee Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!--        WEAPONS           -->
+    <!-- ======================== -->
+    <div class="bento op-fade-in" style="margin-top:48px;">
+      <div class="bento-card bento-card--img span-3" style="max-height:420px;">
+        <img src="Img/Weapon.png" alt="Weapons">
+        <div class="bento-caption">
+          <h4>Weapons</h4>
+          <div class="bento-tags">
+            <span class="bento-tag bento-tag--accent">DESIGN</span>
+            <span class="bento-tag">ASSET</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!--     VIDEO WALKTHROUGH    -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">Video Walkthrough</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--video span-3">
+        <span class="video-badge">VIDEO</span>
+        <div class="video-16x9">
+          <iframe src="https://www.youtube.com/embed/f6Q9RVmu7rs?si=fzbqxE2A1aYDgo76" title="Walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!--        DOWNLOAD          -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ดาวน์โหลด (Download)</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card span-3">
+        <div class="op-download-wrapper">
+          <img src="Img/download.png" alt="Download">
+          <a href="https://drive.google.com/drive/folders/1DqF3wCopflB4ic5hGCe7TalcuXvWSTE_?usp=sharing" target="_blank"
+            rel="noopener noreferrer" class="op-download-btn">
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
-          <div class="Explain" style="grid-area: box-21;"><h2 class="main-title"> Video Walkthrough </h2>
-      <div class="Line"></div></div>
-        <div class="Explain" style="grid-area: box-22;"><iframe width="95%" height="600px" src="https://www.youtube.com/embed/f6Q9RVmu7rs?si=fzbqxE2A1aYDgo76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        
-</div>  
-      
 
+  <!-- ===== Nav ===== -->
+  <nav class="glass-nav">
+    <ul class="nav-links">
+      <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+      <li><a href="project.html" class="nav-item active"><span class="text">Project</span></a></li>
+      <li><a href="about.html" class="nav-item"><span class="text">About</span></a></li>
+    </ul>
+  </nav>
 
+  <!-- ===== Footer ===== -->
+  <footer class="footer-nav">
+    <div class="footer-content">
+      <a href="project.html" class="footer-item">Go Back</a>
+      <a href="newdawn.html" class="footer-item">Next Project</a>
+    </div>
+  </footer>
 
+  <script>
+    const glassCursor = document.querySelector('.glass-cursor');
+    window.addEventListener('mousemove', (e) => {
+      glassCursor.style.left = e.clientX + 'px';
+      glassCursor.style.top = e.clientY + 'px';
+    });
 
-
-<nav class="glass-nav">
-  <ul class="nav-links">
-    <li>
-      <a href="home.html" class="nav-item">
-       
-        <span class="text">Home</span>
-      </a>
-    </li>
-    <li>
-      <a href="project.html" class="nav-item active">
-        
-        <span class="text">Project</span>
-      </a>
-    </li>
-    <li>
-      <a href="about.html" class="nav-item">
-       
-        <span class="text">About</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
-<footer class="footer-nav">
-  <div class="footer-content">
-    <a href="project.html" class="footer-item">  Go Back</a>
-    
-    <a href="newdawn.html" class="footer-item">Next Project </a>
-  </div>
-</footer>
-
-<script>
-  const glassCursor = document.querySelector('.glass-cursor');
-
-  window.addEventListener('mousemove', (e) => {
-    glassCursor.style.left = e.clientX + 'px';
-    glassCursor.style.top = e.clientY + 'px';
-  });
-</script>
-
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
+  </script>
+  <script src="lightbox.js"></script>
 </body>
+
 </html>

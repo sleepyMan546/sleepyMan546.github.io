@@ -233,6 +233,7 @@ a {
   font-size: 128px;
   margin-right: 48px;
   transition: transform .3s ease-in-out;
+  z-index: 3;
 }
 
 .Projects {

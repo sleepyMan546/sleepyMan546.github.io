@@ -1,0 +1,190 @@
+/* ===== Lightbox Overlay ===== */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Lightbox Image ===== */
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    transition: transform 0.35s ease, opacity 0.3s ease;
+    transform: scale(0.92);
+    opacity: 0;
+    cursor: default;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ===== Close Button ===== */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.25s ease;
+    z-index: 10001;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+/* ===== Arrow Buttons ===== */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.25s ease;
+    z-index: 10001;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: 24px;
+}
+
+.lightbox-next {
+    right: 24px;
+}
+
+/* ===== Caption ===== */
+.lightbox-caption {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 28px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    max-width: 80vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 10001;
+}
+
+/* ===== Counter ===== */
+.lightbox-counter {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    padding: 6px 16px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 10001;
+}
+
+/* ===== Clickable images cursor ===== */
+.bento-card--img {
+    cursor: zoom-in;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .lightbox-overlay img {
+        max-width: 96vw;
+        max-height: 80vh;
+        border-radius: 8px;
+    }
+
+    .lightbox-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .lightbox-prev {
+        left: 12px;
+    }
+
+    .lightbox-next {
+        right: 12px;
+    }
+
+    .lightbox-close {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-caption {
+        font-size: 12px;
+        padding: 8px 20px;
+        bottom: 16px;
+    }
+
+    .lightbox-counter {
+        top: 12px;
+        left: 12px;
+        font-size: 12px;
+    }
+}
