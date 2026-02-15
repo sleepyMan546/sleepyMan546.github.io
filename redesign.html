@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Eclipse — UI Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="mesh-bg.css">
+    <link rel="stylesheet" href="op-layout.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #D6D6D0;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+            font-family: 'Poppins', 'Misans', sans-serif;
+            position: relative;
+        }
+
+        /* Before / After image card wrapper */
+        .ba-card {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .ba-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Before / After labels — caption below image */
+        .ba-label {
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 10px 0;
+        }
+
+        .ba-label--before {
+            background: #c0392b;
+            color: #fff;
+        }
+
+        .ba-label--after {
+            background: #27ae60;
+            color: #fff;
+        }
+
+        /* Section divider */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #c0392b, #27ae60);
+            border-radius: 2px;
+            margin: 8px auto 0;
+        }
+
+        /* Placeholder styling */
+        .desc-placeholder {
+            border-left: 3px solid rgba(30, 60, 120, 0.3);
+            padding-left: 16px;
+            color: #666;
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-cursor"></div>
+    <div class="mesh-bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <div class="op-hero">
+        <img src="Img/Redesign_Main Menu.webp" alt="Operation Eclipse — UI Redesign">
+        <div class="op-hero-title">
+            <h1>UI Redesign</h1>
+        </div>
+    </div>
+
+    <!-- ===== Page ===== -->
+    <div class="op-page">
+
+        <!-- ======================== -->
+        <!--        OVERVIEW          -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">ภาพรวม (Overview)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-2">
+                <h3>UI Redesign — Operation Eclipse</h3>
+                <p>
+                    โปรเจ็คนี้เป็นการนำ UI ของเกม Operation Eclipse ที่เคยทำก่อนหน้ามา Redesign ใหม่ทั้งหมด
+                    เนื่องจาก UI เดิมถูกออกแบบภายใต้ข้อจำกัดด้านเวลาและทีมที่เล็ก ทำให้ไม่ได้เน้นเรื่องความสวยงามและ
+                    Usability
+                    โปรเจ็คนี้จึงเป็นการแก้ไขปัญหาเหล่านั้นด้วยหลัก UX/UI Design
+                </p>
+            </div>
+            <div class="bento-card bento-card--text span-1">
+                <div class="op-info-table">
+                    <div class="op-info-row">
+                        <span class="op-info-label">Type</span>
+                        <span class="op-info-value">UI Redesign</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Role</span>
+                        <span class="op-info-value">UI Designer</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Software</span>
+                        <span class="op-info-value">Figma</span>
+                    </div>
+                    <div class="op-info-row">
+                        <span class="op-info-label">Original Game</span>
+                        <span class="op-info-value">Operation Eclipse (2D Action)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ======================== -->
+        <!--   BEFORE / AFTER #1      -->
+        <!--     MAIN MENU            -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">Before → After</h2>
+
+        <!-- Main Menu -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;">
+            <div class="bento-card bento-card--text span-1">
+                <h3>Main Menu</h3>
+                <div class="section-divider" style="margin: 4px 0 12px;"></div>
+                <p><strong>ปัญหาเดิม:</strong></p>
+                <p class="desc-placeholder">— เพิ่มปัญหาของ Main Menu เดิม —</p>
+                <p style="margin-top:12px;"><strong>สิ่งที่ปรับปรุง:</strong></p>
+                <p class="desc-placeholder">— เพิ่มสิ่งที่คุณทำใหม่ —</p>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Operation_Main_Menu.webp" alt="Main Menu — Before" loading="lazy">
+                    <span class="ba-label ba-label--before">BEFORE</span>
+                </div>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Redesign_Main Menu.webp" alt="Main Menu — After" loading="lazy">
+                    <span class="ba-label ba-label--after">AFTER</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gameplay HUD -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;">
+            <div class="bento-card bento-card--text span-1">
+                <h3>Gameplay HUD</h3>
+                <div class="section-divider" style="margin: 4px 0 12px;"></div>
+                <p><strong>ปัญหาเดิม:</strong></p>
+                <p class="desc-placeholder">— เพิ่มปัญหาของ HUD เดิม —</p>
+                <p style="margin-top:12px;"><strong>สิ่งที่ปรับปรุง:</strong></p>
+                <p class="desc-placeholder">— เพิ่มสิ่งที่คุณทำใหม่ —</p>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Operation_Gameplay.webp" alt="Gameplay HUD — Before" loading="lazy">
+                    <span class="ba-label ba-label--before">BEFORE</span>
+                </div>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Redesign_Gameplay.webp" alt="Gameplay HUD — After" loading="lazy">
+                    <span class="ba-label ba-label--after">AFTER</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue Screen -->
+        <div class="bento op-fade-in" style="margin-bottom: 12px;">
+            <div class="bento-card bento-card--text span-1">
+                <h3>Dialogue Screen</h3>
+                <div class="section-divider" style="margin: 4px 0 12px;"></div>
+                <p><strong>ปัญหาเดิม:</strong></p>
+                <p class="desc-placeholder">— เพิ่มปัญหาของ Dialogue เดิม —</p>
+                <p style="margin-top:12px;"><strong>สิ่งที่ปรับปรุง:</strong></p>
+                <p class="desc-placeholder">— เพิ่มสิ่งที่คุณทำใหม่ —</p>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Operation_Dialogue_Screen.webp" alt="Dialogue — Before" loading="lazy">
+                    <span class="ba-label ba-label--before">BEFORE</span>
+                </div>
+            </div>
+            <div class="bento-card span-1" style="padding:0;">
+                <div class="ba-card">
+                    <img src="Img/Redesign_Dialogue_Screen.webp" alt="Dialogue — After" loading="lazy">
+                    <span class="ba-label ba-label--after">AFTER</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       DESIGN RATIONALE   -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">แนวคิดการออกแบบ</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-3">
+                <h3>ทำไม UI ใหม่ถึงออกแบบแบบนี้?</h3>
+                <p class="desc-placeholder">— อธิบายแนวคิดการออกแบบ UI ใหม่ —</p>
+            </div>
+        </div>
+
+        <!-- ======================== -->
+        <!--       TAKEAWAYS          -->
+        <!-- ======================== -->
+        <h2 class="op-section-title op-fade-in">สิ่งที่ได้เรียนรู้ (Takeaways)</h2>
+        <div class="bento op-fade-in">
+            <div class="bento-card bento-card--text span-3">
+                <h3>Takeaways</h3>
+                <p class="desc-placeholder">— เพิ่มสิ่งที่ได้เรียนรู้จากการทำ Redesign —</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== Nav ===== -->
+    <nav class="glass-nav">
+        <ul class="nav-links">
+            <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+            <li><a href="project.html" class="nav-item active"><span class="text">Project</span></a></li>
+            <li><a href="about.html" class="nav-item"><span class="text">About</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer-nav">
+        <div class="footer-content">
+            <a href="project.html" class="footer-item">Go Back</a>
+            <a href="missturer.html" class="footer-item">Next Project</a>
+        </div>
+    </footer>
+
+    <script>
+        const glassCursor = document.querySelector('.glass-cursor');
+        window.addEventListener('mousemove', (e) => {
+            glassCursor.style.left = e.clientX + 'px';
+            glassCursor.style.top = e.clientY + 'px';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
+    </script>
+    <script src="lightbox.js"></script>
+</body>
+
+</html>

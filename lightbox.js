@@ -31,7 +31,7 @@
     /* ---- Collect images ---- */
     function collectImages() {
         images = [];
-        document.querySelectorAll('.bento-card--img img').forEach(img => {
+        document.querySelectorAll('.bento-card--img img, .ba-card img').forEach(img => {
             images.push({ src: img.src, alt: img.alt || '' });
         });
     }
@@ -73,7 +73,7 @@
 
     /* ---- Event: click image cards ---- */
     document.addEventListener('click', (e) => {
-        const card = e.target.closest('.bento-card--img');
+        const card = e.target.closest('.bento-card--img, .ba-card');
         if (!card) return;
         const img = card.querySelector('img');
         if (!img) return;
