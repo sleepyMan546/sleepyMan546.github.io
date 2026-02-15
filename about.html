@@ -4,24 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>About</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="test.css">
   <link rel="stylesheet" href="mesh-bg.css">
-
-
+  <link rel="stylesheet" href="op-layout.css">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
 
+    body {
+      background: #D6D6D0;
+      color: #1a1a1a;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+
+    /* Profile photo card */
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      filter: grayscale(80%);
+      transition: filter 0.5s ease;
+    }
+
+    .profile-photo:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Contact link cards — override default bento-card styles */
+    .contact-card {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 28px 32px;
+      filter: grayscale(100%);
+      transition: all 0.4s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      filter: grayscale(0%);
+      box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border-color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon--fb {
+      background-image: url('Img/Facebook.svg');
+    }
+
+    .contact-icon--email {
+      background-image: url('Img/Gmail_Logo.svg');
+    }
+
+    .contact-icon--github {
+      background-image: url('Img/Github.svg');
+    }
+
+    .contact-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .contact-label {
+      font-size: 13px;
+      font-weight: 400;
+      color: #888;
+      margin-top: 2px;
     }
   </style>
-
 </head>
 
 <body>
+  <div class="glass-cursor"></div>
   <div class="mesh-bg">
     <div class="orb orb--1"></div>
     <div class="orb orb--2"></div>
@@ -29,103 +107,90 @@
     <div class="orb orb--4"></div>
   </div>
 
+  <!-- ===== Page ===== -->
+  <div class="op-page" style="padding-top: 60px;">
 
-
-  <header class="topbar">
-    <div>
-      <h1 class="Project">ABOUT</h1>
-    </div>
-  </header>
-
-
-
-  <div class="containt_about">
-    <div class="glass-cursor"></div>
-    <div class="containts_1">
-      <h2 class="containt-title">Contract</h2>
-      <div class="contract_grid">
-        <div class="contract_item">
-
-          <div class="item_frame">
-            <div class="Resume_Profile"><img src="Img/Profile.webp" loading="lazy"></div>
-          </div>
-
-
-
-          <a href="https://www.facebook.com/tanapol.kenputtar">
-            <div class="item_frame">
-              <div class="logo_facebook"></div>
-              <H3>Tanapol Kenputta</H3>
-            </div>
-          </a>
-
-
-          <a href="mailto:tanapol.sai5@gmail.com">
-            <div class="item_frame">
-              <div class="logo_Email"></div>
-              <H3>tanapol.sai5@gmail.com</H3>
-            </div>
-          </a>
-
-          <a href="https://github.com/sleepyMan546?tab=overview&from=2025-12-01&to=2025-12-31">
-            <div class="item_frame">
-              <div class="logo_git"></div>
-              <H3>sleepyMan546</H3>
-            </div>
-          </a>
-
-        </div>
+    <!-- ======================== -->
+    <!--        ABOUT ME          -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">เกี่ยวกับผม (About Me)</h2>
+    <div class="bento op-fade-in">
+      <div class="bento-card bento-card--img span-1" style="min-height: 400px; overflow: hidden;">
+        <img class="profile-photo" src="Img/Profile.webp" alt="Tanapol Kenputta" loading="lazy"
+          style="width:100%; height:100%; object-fit:cover;">
       </div>
+      <div class="bento-card bento-card--text span-2">
+        <h3>Tanapol Kenputta</h3>
+        <p>
+          สวัสดีครับ ผมชื่อ ธนพล เคนพุทธา<br>
+          ผมสนใจในด้านการออกแบบเกม, การทำ Graphic Design, UI/UX Design
+          และ Video Editing ผมมีความมุ่งมั่นที่จะสร้างสรรค์ผลงานที่มีคุณภาพ
+          และเรียนรู้สิ่งใหม่ๆ อยู่เสมอ
+        </p>
+      </div>
+    </div>
 
+    <!-- ======================== -->
+    <!--       CONTACT            -->
+    <!-- ======================== -->
+    <h2 class="op-section-title op-fade-in">ช่องทางติดต่อ (Contact)</h2>
+    <div class="bento op-fade-in" style="grid-template-columns: repeat(3, 1fr);">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/tanapol.kenputtar" target="_blank" class="bento-card contact-card span-1">
+        <div class="contact-icon contact-icon--fb"></div>
+        <div>
+          <div class="contact-name">Tanapol Kenputta</div>
+          <div class="contact-label">Facebook</div>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:tanapol.sai5@gmail.com" class="bento-card contact-card span-1">
+        <div class="contact-icon contact-icon--email"></div>
+        <div>
+          <div class="contact-name">tanapol.sai5@gmail.com</div>
+          <div class="contact-label">Email</div>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/sleepyMan546?tab=overview&from=2025-12-01&to=2025-12-31" target="_blank"
+        class="bento-card contact-card span-1">
+        <div class="contact-icon contact-icon--github"></div>
+        <div>
+          <div class="contact-name">sleepyMan546</div>
+          <div class="contact-label">GitHub</div>
+        </div>
+      </a>
 
     </div>
-    <!-- <div class="containts_2">
-                 <div class="imgs1"><img src="Img/sai.png" alt="Artwork"></div>
-             
-            </div> -->
-    <!-- <div class="containts_1">
-                <h2 class="containt-title">Resume</h2>
-                 <div class="Resume"><img src="Img/Resume.webp" loading="lazy" alt="Artwork" ></div>
-           
-            </div> -->
-
 
   </div>
 
-
+  <!-- ===== Nav ===== -->
   <nav class="glass-nav">
     <ul class="nav-links">
-      <li>
-        <a href="home.html" class="nav-item ">
-
-          <span class="text">Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="project.html" class="nav-item">
-
-          <span class="text">Project</span>
-        </a>
-      </li>
-      <li>
-        <a href="about.html" class="nav-item active">
-
-          <span class="text">About</span>
-        </a>
-      </li>
+      <li><a href="home.html" class="nav-item"><span class="text">Home</span></a></li>
+      <li><a href="project.html" class="nav-item"><span class="text">Project</span></a></li>
+      <li><a href="about.html" class="nav-item active"><span class="text">About</span></a></li>
     </ul>
   </nav>
+
   <script>
     const glassCursor = document.querySelector('.glass-cursor');
-
     window.addEventListener('mousemove', (e) => {
       glassCursor.style.left = e.clientX + 'px';
       glassCursor.style.top = e.clientY + 'px';
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.op-fade-in').forEach(el => observer.observe(el));
   </script>
-
-
-
 </body>
 
 </html>
