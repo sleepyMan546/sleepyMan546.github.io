@@ -95,6 +95,40 @@
       color: #888;
       margin-top: 2px;
     }
+
+    /* ===== Mobile Responsive for About page ===== */
+    @media screen and (max-width: 1180px) {
+
+      /* Override inline grid-template-columns on Skills & Contact */
+      .bento[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Profile photo — shorter on mobile */
+      .bento-card--img[style*="min-height"] {
+        min-height: 260px !important;
+      }
+
+      /* Contact cards — compact for mobile */
+      .contact-card {
+        padding: 18px 20px;
+        gap: 14px;
+      }
+
+      .contact-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .contact-name {
+        font-size: 14px;
+        word-break: break-all;
+      }
+
+      .contact-label {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
